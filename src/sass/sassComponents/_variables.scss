@@ -1,0 +1,44 @@
+$shadow-bottom: 0px 13px 12px -5px rgba(0, 0, 0, 0.88);
+$shadow: 0px 5px 18px 10px rgba(0, 0, 0, 0.3);
+$shadow-sm: 1px 2px 2px lightgrey;
+
+@mixin position($align: center, $justify: center, $flow: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flow;
+}
+
+$breakpoints: (
+  "sm": 550px,
+  "md": 800px,
+  "lg": 1000px,
+  "xl": 1250px,
+);
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin media($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

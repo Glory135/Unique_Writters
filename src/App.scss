@@ -1,0 +1,61 @@
+@import "./sass/sassComponents/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "josefin Sans", sans-serif;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+body {
+  margin: 0;
+}
+
+main.App {
+  width: 100%;
+  height: auto;
+  height: auto;
+  overflow-x: hidden;
+  @import "./sass/components/topBar";
+  & .app-body {
+    display: flex;
+    width: 100%;
+    @include md {
+      margin-top: 16vh;
+    }
+    & .left-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: auto;
+      min-width: 5%;
+      height: 100vh;
+      padding: 0;
+      padding-top: 10vh;
+      box-shadow: $shadow-sm;
+      @import "./sass/components/leftBar";
+      @include md {
+        padding-top: 15vh;
+      }
+    }
+    & .right-body-container {
+      margin-left: auto;
+      width: 95%;
+      display: flex;
+      @include sm {
+        flex-direction: column;
+      }
+      & .body-container {
+        flex: 2.5;
+        border: 1px solid red;
+      }
+
+      & .right-container {
+        flex: 1;
+        border: 1px solid red;
+      }
+    }
+  }
+}

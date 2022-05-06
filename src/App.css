@@ -1,38 +1,500 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "josefin Sans", sans-serif;
+  font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+main.App {
+  width: 100%;
+  height: auto;
+  height: auto;
+  overflow-x: hidden;
+}
+
+main.App .topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+}
+
+@media (max-width: 800px) {
+  main.App .topBar {
+    height: 15vh;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main.App .topBar .topBar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  height: 100%;
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container {
+    width: 96%;
+  }
+}
+
+main.App .topBar .topBar-container .logo {
+  font-size: x-large;
+  font-weight: lighter;
+  color: white;
+  font-family: cursive;
+}
+
+main.App .topBar .topBar-container .logo span {
+  font-size: x-large;
+  font-weight: lighter;
+}
+
+@media (max-width: 800px) {
+  main.App .topBar .topBar-container .logo span {
+    display: none;
+  }
+}
+
+main.App .topBar .topBar-container .search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.319);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+main.App .topBar .topBar-container .search-container:hover, main.App .topBar .topBar-container .search-container:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+main.App .topBar .topBar-container .search-container input {
+  margin-left: 10px;
+  width: 25vw;
+  color: white;
+  height: 80%;
+  background-color: transparent;
+  border: none;
+}
+
+main.App .topBar .topBar-container .search-container input:focus {
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  main.App .topBar .topBar-container .search-container input {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .search-container input {
+    width: 45vw;
+    display: none;
+  }
+}
+
+main.App .topBar .topBar-container .search-container .cancel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.App .topBar .topBar-container .filter-container {
+  width: 11%;
+}
+
+@media (max-width: 800px) {
+  main.App .topBar .topBar-container .filter-container {
+    width: 20%;
+  }
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .filter-container {
+    display: none;
+  }
+}
+
+main.App .topBar .topBar-container .filter-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main.App .topBar .topBar-container .filter-container select {
+  color: white;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+main.App .topBar .topBar-container .filter-container select:focus {
+  outline: none;
+}
+
+main.App .topBar .topBar-container .filter-container select option {
+  color: black;
+}
+
+main.App .topBar .topBar-container .top-theme-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .top-theme-switcher {
+    width: 55px;
+    height: 25px;
   }
 }
+
+main.App .topBar .topBar-container .top-theme-switcher:hover {
+  cursor: pointer;
+}
+
+main.App .topBar .topBar-container .top-theme-switcher:hover .ball {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main.App .topBar .topBar-container .top-theme-switcher .ball {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 99%;
+  background-color: white;
+  width: 50%;
+  border-radius: 50%;
+}
+
+main.App .topBar .topBar-container .top-theme-switcher .theme-container {
+  width: 50%;
+  height: 100%;
+}
+
+main.App .topBar .topBar-container .loginBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .loginBtn {
+    font-weight: lighter;
+    font-size: 16px;
+  }
+}
+
+main.App .topBar .topBar-container .loginBtn:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 13px 12px -5px rgba(0, 0, 0, 0.88);
+          box-shadow: 0px 13px 12px -5px rgba(0, 0, 0, 0.88);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  cursor: pointer;
+}
+
+main.App .topBar .topBar-container .loginBtn:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .loginBtn .logIcon {
+    display: none;
+  }
+}
+
+main.App .topBar .topBar-container .top-profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.App .topBar .topBar-container .top-profile-container .top-profile-con {
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .top-profile-container .top-profile-con {
+    margin: 0;
+    padding: 5px;
+  }
+}
+
+main.App .topBar .topBar-container .top-profile-container .top-profile-con:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.26);
+}
+
+main.App .topBar .topBar-container .top-profile-container .top-profile-con .top-profile-main-container {
+  color: white;
+  position: relative;
+}
+
+main.App .topBar .topBar-container .top-profile-container .top-profile-con .top-profile-main-container .badge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: -7.5px;
+  right: -7.5px;
+  color: white;
+  font-size: 11px;
+}
+
+@media (max-width: 550px) {
+  main.App .topBar .topBar-container .top-profile-container .top-profile-con.notification {
+    display: none;
+  }
+}
+
+main.App .app-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body {
+    margin-top: 16vh;
+  }
+}
+
+main.App .app-body .left-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  min-width: 5%;
+  height: 100vh;
+  padding: 0;
+  padding-top: 10vh;
+  -webkit-box-shadow: 1px 2px 2px lightgrey;
+          box-shadow: 1px 2px 2px lightgrey;
+}
+
+main.App .app-body .left-container .leftBar {
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow-y: scroll;
+}
+
+main.App .app-body .left-container .leftBar::-webkit-scrollbar {
+  display: none;
+}
+
+main.App .app-body .left-container .leftBar .left-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 100%;
+  height: 50px;
+  padding: 0 20px;
+}
+
+main.App .app-body .left-container .leftBar .left-item:hover {
+  background-color: rgba(255, 255, 255, 0.371);
+  cursor: pointer;
+}
+
+main.App .app-body .left-container .leftBar .left-item:active {
+  background-color: transparent;
+  -webkit-transition: 0;
+  transition: 0;
+}
+
+main.App .app-body .left-container .leftBar .left-item.menu {
+  height: 70px;
+  position: absolute;
+}
+
+main.App .app-body .left-container .leftBar .left-item .menu-icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  font-size: 40px;
+}
+
+main.App .app-body .left-container .leftBar .left-item .icons {
+  font-size: 35px;
+  margin-right: 15px;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .left-container .leftBar .left-item .icons {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
+
+main.App .app-body .left-container .leftBar .left-item span {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .left-container {
+    padding-top: 15vh;
+  }
+}
+
+main.App .app-body .right-body-container {
+  margin-left: auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main.App .app-body .right-body-container .body-container {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  border: 1px solid red;
+}
+
+main.App .app-body .right-body-container .right-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid red;
+}
+/*# sourceMappingURL=App.css.map */
