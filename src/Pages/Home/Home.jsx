@@ -1,66 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Feed } from "../../Components/Feed/Feed";
+import { data } from "../../data";
+import { FilterListSharp } from "@material-ui/icons";
+import { Context } from "../../Context/Context";
 
 const Home = () => {
+  const { theme } = useContext(Context);
   return (
-    <div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
+    <div className='home'>
+      <div className='home-head'>
+        <div className='title'>Posts</div>
+        <div className='filter-container'>
+          <div>
+            <FilterListSharp />
+            Filter By
+          </div>
+          <select style={{ color: theme.text }} name='filter'>
+            <option value='recent'>Recently Posted</option>
+            <option value='recent'>A - Z</option>
+          </select>
+        </div>
+      </div>
+      <Feed data={data} />
     </div>
   );
 };

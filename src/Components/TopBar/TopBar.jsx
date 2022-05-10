@@ -3,7 +3,6 @@ import { Context } from "../../Context/Context";
 import {
   Cancel,
   ExitToApp,
-  FilterListSharp,
   Notifications,
   Person,
   Search,
@@ -13,6 +12,7 @@ import { AppBar, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   searchIcon: {
     color: "white",
+    fontSize: "18px",
   },
 }));
 
@@ -37,7 +37,7 @@ export const TopBar = () => {
     >
       <div className='topBar-container'>
         <div className='logo'>
-          Unique <span>Writters</span>{" "}
+          Unique <span>Writers</span>{" "}
         </div>
         <div className='search-container'>
           <Search
@@ -58,18 +58,8 @@ export const TopBar = () => {
             onClick={() => setOpenSearch(false)}
             className='cancel'
           >
-            <Cancel />
+            <Cancel className='cancel-icon' />
           </div>
-        </div>
-        <div className='filter-container'>
-          <div>
-            <FilterListSharp />
-            Filter By
-          </div>
-          <select name='filter'>
-            <option value='recent'>Recently Posted</option>
-            <option value='recent'>A - Z</option>
-          </select>
         </div>
 
         <div

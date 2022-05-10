@@ -29,26 +29,26 @@
     & .search-container {
       @include position(center, center);
       background-color: rgba(255, 255, 255, 0.319);
-      padding: 10px;
+      padding: 7px 10px;
       border-radius: 30px;
       &:hover,
       &:focus {
         background-color: rgba(255, 255, 255, 0.4);
       }
+      @include sm {
+        padding: 5px;
+      }
 
       & input {
         margin-left: 10px;
-        width: 25vw;
+        width: 50vw;
         color: white;
-        height: 80%;
+        height: 60%;
         background-color: transparent;
         border: none;
-
+        font-size: 15px;
         &:focus {
           outline: none;
-        }
-        @include md {
-          width: 30vw;
         }
         @include sm {
           width: 45vw;
@@ -57,42 +57,17 @@
       }
       & .cancel {
         @include position;
-      }
-    }
-    & .filter-container {
-      width: 11%;
-      @include md {
-        width: 20%;
-      }
-      @include sm {
-        // width: 25%;
-        display: none;
-      }
-      & div {
-        @include position(center, center);
-        color: white;
-      }
-      & select {
-        color: white;
-        background-color: transparent;
-        width: 100%;
-        border: 1px solid white;
-        padding: 5px;
-        border-radius: 5px;
-        // height: 0px;
-        &:focus {
-          outline: none;
-        }
-        & option {
-          color: black;
+        & .cancel-icon {
+          font-size: 18px;
         }
       }
     }
+
     & .top-theme-switcher {
       display: flex;
       position: relative;
-      width: 60px;
-      height: 30px;
+      width: 50px;
+      height: 25px;
       border: 2px solid white;
       border-radius: 20px;
       @include sm {
@@ -124,8 +99,9 @@
       @include position(center, _);
       color: white;
       font-weight: bold;
-      padding: 10px 20px;
+      padding: 5px 10px;
       border-radius: 20px;
+      font-size: 15px;
       @include sm {
         font-weight: lighter;
         font-size: 16px;

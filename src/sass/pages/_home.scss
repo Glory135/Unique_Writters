@@ -1,0 +1,45 @@
+& .home {
+  @include position(center, center, column);
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  & .home-head {
+    @include position(flex-start, space-between);
+    width: 90%;
+    margin: 5vh 0;
+    height: 15vh;
+
+    & .title {
+      font-size: 30px;
+      @include sm {
+        font-size: 25px;
+      }
+    }
+
+    & .filter-container {
+      & div {
+        @include position(center, center);
+        @include sm {
+          font-size: 14px;
+        }
+      }
+      & select {
+        background-color: transparent;
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+        @include sm {
+          font-size: 14px;
+        }
+        & option {
+          color: black;
+        }
+      }
+    }
+  }
+}

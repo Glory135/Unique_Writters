@@ -1,0 +1,46 @@
+& .post {
+  width: 80%;
+  margin: 0;
+  margin-bottom: 100px;
+  @include sm {
+    width: 90%;
+  }
+  & .post-action-container {
+    cursor: pointer;
+    & .post-media {
+      height: 250px;
+      @include md {
+        height: 200px;
+      }
+      @include sm {
+        height: 150px;
+      }
+    }
+    & .post-details {
+      width: 100%;
+      margin-bottom: 10px;
+      @include position(center, space-between);
+      & .detail {
+        font-size: 10px;
+      }
+    }
+    & .post-title {
+      @include md {
+        font-size: 22px;
+      }
+      @include sm {
+        font-size: 20px;
+      }
+    }
+    & .post-summary {
+      line-height: 24px;
+      @include md {
+        font-size: 13px;
+      }
+      @include sm {
+        line-height: 17px;
+        font-size: 11px;
+      }
+    }
+  }
+}

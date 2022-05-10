@@ -1,4 +1,5 @@
-import { Container } from "@material-ui/core";
+import { Avatar, Container } from "@material-ui/core";
+import { Add } from "@material-ui/icons";
 import { useContext } from "react";
 import "./App.css";
 import { LeftBar } from "./Components/LeftBar/LeftBar";
@@ -33,7 +34,14 @@ function App() {
             <RightBar />
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <Avatar
+        title='Write'
+        style={{ backgroundColor: theme.secondary }}
+        className='add-circle-btn'
+      >
+        <Add />
+      </Avatar>
     </main>
   );
 }

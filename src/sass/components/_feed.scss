@@ -1,0 +1,54 @@
+& .paginate {
+  @include position(center, center, column);
+  width: 100%;
+  height: auto;
+}
+
+.paginate-btn-container {
+  @include position(center, _);
+  min-height: 100px;
+  height: auto;
+  width: 100%;
+
+  & .paginationBtn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & li {
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: 3px solid #6200ee;
+      @include md {
+        padding: 5px 10px;
+      }
+      @include sm {
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.paginationBtn li:hover {
+  color: #6200ee;
+  background: transparent;
+  transition: 0.1s;
+}
+
+.paginationActive {
+  color: #6200ee;
+  background: transparent;
+  transition: 0.1s;
+}
+.paginationActive a {
+  color: #6200ee;
+}

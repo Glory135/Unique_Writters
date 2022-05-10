@@ -14,6 +14,7 @@ body {
 }
 
 main.App {
+  position: relative;
   width: 100%;
   height: auto;
   height: auto;
@@ -22,9 +23,7 @@ main.App {
   & .app-body {
     display: flex;
     width: 100%;
-    @include md {
-      margin-top: 16vh;
-    }
+
     & .left-container {
       position: fixed;
       top: 0;
@@ -35,27 +34,51 @@ main.App {
       padding: 0;
       padding-top: 10vh;
       box-shadow: $shadow-sm;
-      @import "./sass/components/leftBar";
       @include md {
         padding-top: 15vh;
       }
+      @import "./sass/components/leftBar";
     }
     & .right-body-container {
       margin-left: auto;
-      width: 95%;
+      width: auto;
+      max-width: 95%;
       display: flex;
+      transition: 0.3s;
+      padding-top: 10vh;
+      @include md {
+        padding-top: 15vh;
+      }
       @include sm {
         flex-direction: column;
+        max-width: 88%;
       }
       & .body-container {
         flex: 2.5;
-        border: 1px solid red;
+        @include sm {
+          flex: 1;
+        }
+        @import "./sass/pages/home";
       }
 
       & .right-container {
         flex: 1;
-        border: 1px solid red;
+        box-shadow: $shadow;
+        @import "./sass/components/rightBar";
       }
+    }
+  }
+  @import "./sass/components/feed";
+  @import "./sass/components/post";
+  & .add-circle-btn {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    &:active {
+      transform: scale(0.8);
     }
   }
 }
