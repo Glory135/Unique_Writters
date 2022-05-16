@@ -1,6 +1,16 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../Context/Context";
-import { Home, Menu, CancelOutlined } from "@material-ui/icons";
+import {
+  Home,
+  Menu,
+  CancelOutlined,
+  Info,
+  Contacts,
+  PostAdd,
+  Add,
+  ContactSupport,
+  ExitToApp,
+} from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -49,48 +59,33 @@ export const LeftBar = () => {
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <Info className={classes.icon && "icons"} />{" "}
+        <span style={name}>About Us </span>
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <ContactSupport className={classes.icon && "icons"} />{" "}
+        <span style={name}>Contact Us </span>
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <PostAdd className={classes.icon && "icons"} />{" "}
+        <span style={name}>Apply To Be A Writer </span>
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <Contacts className={classes.icon && "icons"} />{" "}
+        <span style={name}>Writters </span>
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <Add className={classes.icon && "icons"} />{" "}
+        <span style={name}>Write </span>
       </div>
       <div className='left-item'>
         {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
-      </div>
-      <div className='left-item'>
-        {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
-      </div>
-      <div className='left-item'>
-        {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
-      </div>
-      <div className='left-item'>
-        {" "}
-        <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home </span>
+        <ExitToApp className={classes.icon && "icons"} />{" "}
+        <span style={name}>LogOut </span>
       </div>
     </div>
   );

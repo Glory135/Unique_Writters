@@ -8,7 +8,7 @@
   & .home-head {
     @include position(flex-start, space-between);
     width: 90%;
-    margin: 5vh 0;
+    margin-top: 5vh;
     height: 15vh;
 
     & .title {

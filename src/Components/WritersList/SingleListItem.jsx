@@ -1,3 +1,4 @@
+import { ThumbUpOutlined } from "@material-ui/icons";
 import React, { useContext } from "react";
 import { Context } from "../../Context/Context";
 
@@ -14,10 +15,18 @@ export const SingleListItem = ({ writer }) => {
         <img src={writer} alt='writer' />
       </div>
       <div className='details-con'>
-        <span className='name'>Bolaji Blessing </span>{" "}
-        <span className='points' style={{ backgroundColor: theme.secondary }}>
-          30 points
-        </span>{" "}
+        <div className='details-text-con'>
+          <span className='name'>Bolaji Blessing </span>{" "}
+          <span className='points' style={{ backgroundColor: theme.secondary }}>
+            30 points
+          </span>{" "}
+        </div>
+        <div className='details-stats-con'>
+          <div className='details-stats-item'>
+            <ThumbUpOutlined className='details-stats-icon' />
+            <div className='details-stat-text'>120</div>
+          </div>
+        </div>
       </div>
     </div>
   );

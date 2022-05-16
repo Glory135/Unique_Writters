@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "josefin Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -40,7 +40,7 @@ main.App .topBar {
   position: fixed;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   main.App .topBar {
     height: 15vh;
   }
@@ -342,7 +342,7 @@ main.App .app-body .left-container {
           box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   main.App .app-body .left-container {
     padding-top: 15vh;
   }
@@ -404,20 +404,14 @@ main.App .app-body .left-container .leftBar .left-item .menu-icon {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: absolute;
-  font-size: 40px;
-}
-
-@media (max-width: 800px) {
-  main.App .app-body .left-container .leftBar .left-item .menu-icon {
-    font-size: 30px;
-  }
+  font-size: 30px;
 }
 
 main.App .app-body .left-container .leftBar .left-item .icons {
-  font-size: 35px;
+  font-size: 25px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   main.App .app-body .left-container .leftBar .left-item .icons {
     font-size: 20px;
   }
@@ -425,15 +419,6 @@ main.App .app-body .left-container .leftBar .left-item .icons {
 
 main.App .app-body .left-container .leftBar .left-item span {
   padding-left: 15px;
-  font-size: 19px;
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  main.App .app-body .left-container .leftBar .left-item span {
-    font-size: 16px;
-    font-size: lighter;
-  }
 }
 
 main.App .app-body .right-body-container {
@@ -448,7 +433,7 @@ main.App .app-body .right-body-container {
   padding-top: 10vh;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px) {
   main.App .app-body .right-body-container {
     padding-top: 15vh;
   }
@@ -468,6 +453,14 @@ main.App .app-body .right-body-container .body-container {
   -webkit-box-flex: 2.5;
       -ms-flex: 2.5;
           flex: 2.5;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .right-body-container .body-container {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
 }
 
 @media (max-width: 550px) {
@@ -513,7 +506,7 @@ main.App .app-body .right-body-container .body-container .home .home-head {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 90%;
-  margin: 5vh 0;
+  margin-top: 5vh;
   height: 15vh;
 }
 
@@ -599,7 +592,8 @@ main.App .app-body .right-body-container .right-container .rightBar {
 main.App .app-body .right-body-container .right-container .rightBar .right-head {
   font-size: 30px;
   width: 95%;
-  height: 10vh;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -609,17 +603,17 @@ main.App .app-body .right-body-container .right-container .rightBar .right-head 
   }
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container {
   width: 90%;
   margin-top: 3vh;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList {
   width: 100%;
   border-bottom: 1px solid lightgrey;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem {
   padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,9 +621,9 @@ main.App .app-body .right-body-container .right-container .rightBar .writter-lis
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -642,49 +636,129 @@ main.App .app-body .right-body-container .right-container .rightBar .writter-lis
   border-radius: 10px;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem:hover {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.067);
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .img-con {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .img-con {
   width: 40px;
   height: 30px;
   border-right: 1px solid lightgrey;
+  margin-right: 5px;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .img-con img {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .img-con img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .details-con {
-  height: 80%;
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con {
+  height: 90%;
   width: 80%;
 }
 
-@media (max-width: 800px) {
-  main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .details-con {
-    width: 75%;
-  }
-}
-
 @media (max-width: 550px) {
-  main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .details-con {
+  main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con {
     width: 80%;
   }
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .details-con span.name {
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-text-con {
+  height: 50%;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-text-con span.name {
   font-size: 14px;
 }
 
-main.App .app-body .right-body-container .right-container .rightBar .writter-list-container .writerList .singleListItem .details-con span.points {
-  font-size: 12px;
-  padding: 2px 5px;
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-text-con span.points {
+  font-size: 10px;
+  padding: 2px 3px;
   border-radius: 10px;
   color: white;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-stats-con {
+  height: 50%;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-stats-con .details-stats-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 100%;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con .details-stats-con .details-stats-item .details-stat-text {
+  font-size: 10px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container {
+  width: 90%;
+  margin-top: 50px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.161);
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem img {
+  width: 30%;
+  height: 100%;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-con {
+  width: calc(70% - 10px);
+  margin-left: 10px;
+  height: 95%;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-item {
+  overflow: hidden;
+  height: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 20px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-item.author {
+  font-size: 13px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-item .singleStoryItem-details-item-icon-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-item .singleStoryItem-details-item-icon-con span {
+  font-size: 10px;
 }
 
 main.App .paginate {

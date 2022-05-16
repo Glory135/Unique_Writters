@@ -3,7 +3,7 @@
   width: 100%;
   height: 10vh;
   position: fixed;
-  @include md {
+  @include sm {
     height: 15vh;
   }
   & .topBar-container {

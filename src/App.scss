@@ -5,7 +5,7 @@
 *::after {
   box-sizing: border-box;
   font-family: "josefin Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   transition: 0.3s;
 }
 
@@ -34,7 +34,7 @@ main.App {
       padding: 0;
       padding-top: 10vh;
       box-shadow: $shadow-sm;
-      @include md {
+      @include sm {
         padding-top: 15vh;
       }
       @import "./sass/components/leftBar";
@@ -46,7 +46,7 @@ main.App {
       display: flex;
       transition: 0.3s;
       padding-top: 10vh;
-      @include md {
+      @include sm {
         padding-top: 15vh;
       }
       @include sm {
@@ -55,6 +55,9 @@ main.App {
       }
       & .body-container {
         flex: 2.5;
+        @include md {
+          flex: 2;
+        }
         @include sm {
           flex: 1;
         }

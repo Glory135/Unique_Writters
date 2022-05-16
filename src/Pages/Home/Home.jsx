@@ -18,6 +18,8 @@ const Home = () => {
           <select style={{ color: theme.text }} name='filter'>
             <option value='recent'>Recently Posted</option>
             <option value='recent'>A - Z</option>
+            <option value='recent'>Most liked</option>
+            <option value='recent'>Most Popular</option>
           </select>
         </div>
       </div>

@@ -32,27 +32,18 @@
     & .menu-icon {
       transition: 0.3s;
       position: absolute;
-      font-size: 40px;
-      @include md {
-        font-size: 30px;
-      }
+      font-size: 30px;
     }
 
     & .icons {
-      font-size: 35px;
-      @include md {
+      font-size: 25px;
+      @include sm {
         font-size: 20px;
       }
     }
 
     & span {
       padding-left: 15px;
-      font-size: 19px;
-      font-weight: bold;
-      @include md {
-        font-size: 16px;
-        font-size: lighter;
-      }
     }
   }
 }
