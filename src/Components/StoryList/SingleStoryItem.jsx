@@ -5,10 +5,7 @@ import { Context } from "../../Context/Context";
 export const SingleStoryItem = ({ item }) => {
   const { theme } = useContext(Context);
   return (
-    <div
-      style={{ border: `1px solid` + theme.primary }}
-      className='singleStoryItem'
-    >
+    <div className='singleStoryItem'>
       <img src={item} alt='' />
       <div className='singleStoryItem-details-con'>
         <div className='singleStoryItem-details-item'>

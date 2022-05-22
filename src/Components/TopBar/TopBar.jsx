@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../Context/Context";
 import {
   Cancel,
@@ -7,7 +7,9 @@ import {
   Person,
   Search,
 } from "@material-ui/icons";
-import { AppBar, makeStyles } from "@material-ui/core";
+import { AppBar, Button, makeStyles } from "@material-ui/core";
+import sun from "../../images/icon-sun.svg";
+import moon from "../../images/icon-moon.svg";
 
 const useStyles = makeStyles((theme) => ({
   searchIcon: {
@@ -16,19 +18,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TopBar = () => {
-  const [light, setLight] = useState(true);
+export const TopBar = ({ setOpenLoginModal }) => {
   const [openSearch, setOpenSearch] = useState(false);
-  const { theme, themeDispatch } = useContext(Context);
+  const { light, dark, theme, themeDispatch } = useContext(Context);
   const classes = useStyles();
 
-  useEffect(() => {
-    if (light) {
-      themeDispatch({ type: "LIGHT_MODE" });
-    } else {
-      themeDispatch({ type: "DARK_MODE" });
-    }
-  }, [light, themeDispatch]);
   return (
     <AppBar
       style={{ backgroundColor: theme.primary }}
@@ -64,10 +58,14 @@ export const TopBar = () => {
 
         <div
           style={{
-            display: openSearch ? "none" : "block",
+            display: openSearch ? "none" : "flex",
           }}
           onClick={() => {
-            setLight(!light);
+            if (light) {
+              themeDispatch({ type: "DARK_MODE" });
+            } else if (dark) {
+              themeDispatch({ type: "LIGHT_MODE" });
+            }
           }}
           className='top-theme-switcher'
         >
@@ -77,19 +75,29 @@ export const TopBar = () => {
             }}
             className='ball'
           ></div>
-          <div className='theme-container'></div>
-          <div className='theme-container'></div>
+          <div className='theme-container'>
+            <img src={moon} alt='moon' />
+          </div>
+          <div className='theme-container'>
+            <img src={sun} alt='sun' />
+          </div>
         </div>
 
-        <div
+        <Button
+          type='submit'
+          variant='contained'
+          size='small'
+          onClick={() => setOpenLoginModal(true)}
           style={{
             backgroundColor: theme.secondary,
+            color: "white",
+            borderRadius: "10px",
             display: openSearch ? "none" : "flex",
           }}
-          className='loginBtn'
         >
-          Log In <ExitToApp className='logIcon' />
-        </div>
+          login
+        </Button>
+
         {/* <div className='top-profile-container '>
           <div className='top-profile-con notification'>
             <div className='top-profile-main-container'>

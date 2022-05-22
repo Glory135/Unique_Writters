@@ -13,6 +13,7 @@ export const themeInitialState = {
 export const themeReducer = (state, action) => {
   switch (action.type) {
     case "DARK_MODE":
+      localStorage.setItem("theme", "dark");
       return {
         lightMode: false,
         darkMode: true,
@@ -25,6 +26,7 @@ export const themeReducer = (state, action) => {
         },
       };
     case "LIGHT_MODE":
+      localStorage.setItem("theme", "light");
       return {
         lightMode: true,
         darkMode: false,
