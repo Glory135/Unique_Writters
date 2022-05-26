@@ -1,0 +1,56 @@
+& .contact-form-con {
+  width: 90%;
+  margin-bottom: 30px;
+  & form {
+    margin-bottom: 30px;
+    & label {
+      width: 100px;
+      height: 100px;
+
+      & .label-title {
+        font-size: 13px;
+        margin: 20px 0 5px 0;
+      }
+      & input,
+      & textarea {
+        width: 30vw;
+        height: 30px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        background: transparent;
+        @include sm {
+          width: 70vw;
+        }
+      }
+      & textarea {
+        width: 50vw;
+        height: 30vh;
+        padding: 10px;
+        @include sm {
+          width: 80vw;
+        }
+      }
+    }
+    & .btn {
+      width: 20%;
+      margin-top: 20px;
+      background-color: transparent;
+    }
+  }
+  & .socials-con {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    & .social {
+      padding: 10px;
+      border-radius: 50%;
+      margin: 10px;
+      cursor: pointer;
+      & .icon {
+        color: white;
+      }
+    }
+  }
+}

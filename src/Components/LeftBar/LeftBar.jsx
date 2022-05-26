@@ -12,6 +12,7 @@ import {
   ExitToApp,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -52,38 +53,37 @@ export const LeftBar = () => {
           className='menu-icon'
         />
       </div>
-      <div style={{ marginTop: "70px" }} className='left-item'>
+      <Link style={{ marginTop: "70px" }} className='left-item Link' to='/'>
         {" "}
         <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home</span>
-      </div>
-      <div className='left-item'>
+        <span style={name}>Home</span>{" "}
+      </Link>
+      <Link className='left-item Link' to='/about'>
         {" "}
         <Info className={classes.icon && "icons"} />{" "}
         <span style={name}>About Us </span>
-      </div>
-      <div className='left-item'>
+      </Link>
+      <Link className='left-item Link' to='/contact'>
         {" "}
-        <ContactSupport className={classes.icon && "icons"} />{" "}
+        <ContactSupport className={classes.icon && "icons"} />
         <span style={name}>Contact Us </span>
-      </div>
-      <div className='left-item'>
+      </Link>
+      <Link className='left-item Link' to='/writerApplication'>
         {" "}
         <PostAdd className={classes.icon && "icons"} />{" "}
         <span style={name}>Apply To Be A Writer </span>
-      </div>
-      <div className='left-item'>
+      </Link>
+      <Link className='left-item Link' to='/writters'>
         {" "}
         <Contacts className={classes.icon && "icons"} />{" "}
         <span style={name}>Writters </span>
-      </div>
-      <div className='left-item'>
+      </Link>
+      <Link className='left-item Link' to='/post'>
         {" "}
         <Add className={classes.icon && "icons"} />{" "}
         <span style={name}>Write </span>
-      </div>
-      <div className='left-item'>
-        {" "}
+      </Link>
+      <div className='left-item' to='/'>
         <ExitToApp className={classes.icon && "icons"} />{" "}
         <span style={name}>LogOut </span>
       </div>

@@ -2,10 +2,11 @@
   margin-top: 30px;
   @include position(center, _);
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   min-height: 30px;
   height: auto;
   padding: 10px;
+  border-radius: 3px;
   background-color: rgba(194, 184, 184, 0.315);
   & .breadCrumbs-item {
     margin: 0 10px;

@@ -13,8 +13,9 @@ import moon from "../../images/icon-moon.svg";
 
 const useStyles = makeStyles((theme) => ({
   searchIcon: {
+    cursor: "pointer",
     color: "white",
-    fontSize: "18px",
+    fontSize: "20px",
   },
 }));
 
@@ -33,14 +34,22 @@ export const TopBar = ({ setOpenLoginModal }) => {
         <div className='logo'>
           Unique <span>Writers</span>{" "}
         </div>
-        <div className='search-container'>
+        <div
+          style={{
+            backgroundColor: openSearch
+              ? "rgba(255, 255, 255, 0.319)"
+              : "transparent",
+          }}
+          className='search-container'
+        >
           <Search
             onClick={() => setOpenSearch(true)}
             className={classes.searchIcon}
           />
           <input
             style={{
-              display: openSearch ? "block" : "none",
+              // display: openSearch ? "block" : "none",
+              width: openSearch ? "50vw" : 0,
             }}
             type='search'
             placeholder='Search....'

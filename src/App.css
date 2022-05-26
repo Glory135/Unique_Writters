@@ -1,3 +1,75 @@
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(100%);
+            transform: scale(0) translateY(100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(100%);
+            transform: scale(0) translateY(100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+  }
+}
+
+@-webkit-keyframes fadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(100%);
+            transform: scale(0) translateX(100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(100%);
+            transform: scale(0) translateX(100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+
+@-webkit-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(-100%);
+            transform: scale(0) translateY(-100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(-100%);
+            transform: scale(0) translateY(-100%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+  }
+}
+
 @-webkit-keyframes pop {
   0% {
     -webkit-transform: scale(0);
@@ -143,7 +215,6 @@ main.App .topBar .topBar-container .search-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.319);
   padding: 7px 10px;
   border-radius: 30px;
 }
@@ -172,13 +243,6 @@ main.App .topBar .topBar-container .search-container input:focus {
   outline: none;
 }
 
-@media (max-width: 550px) {
-  main.App .topBar .topBar-container .search-container input {
-    width: 45vw;
-    display: none;
-  }
-}
-
 main.App .topBar .topBar-container .search-container .cancel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,7 +260,8 @@ main.App .topBar .topBar-container .search-container .cancel {
 }
 
 main.App .topBar .topBar-container .search-container .cancel .cancel-icon {
-  font-size: 18px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 main.App .topBar .topBar-container .top-theme-switcher {
@@ -258,53 +323,6 @@ main.App .topBar .topBar-container .top-theme-switcher .theme-container {
 main.App .topBar .topBar-container .top-theme-switcher .theme-container img {
   width: 90%;
   height: 90%;
-}
-
-main.App .topBar .topBar-container .loginBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 15px;
-}
-
-@media (max-width: 550px) {
-  main.App .topBar .topBar-container .loginBtn {
-    font-weight: lighter;
-    font-size: 16px;
-  }
-}
-
-main.App .topBar .topBar-container .loginBtn:hover {
-  -webkit-box-shadow: 0px 13px 12px -5px rgba(0, 0, 0, 0.88);
-          box-shadow: 0px 13px 12px -5px rgba(0, 0, 0, 0.88);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  cursor: pointer;
-}
-
-main.App .topBar .topBar-container .loginBtn:active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-@media (max-width: 550px) {
-  main.App .topBar .topBar-container .loginBtn .logIcon {
-    display: none;
-  }
 }
 
 main.App .topBar .topBar-container .top-profile-container {
@@ -479,8 +497,7 @@ main.App .app-body .left-container .leftBar .left-item span {
 
 main.App .app-body .right-body-container {
   margin-left: auto;
-  width: auto;
-  max-width: 95%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,16 +507,11 @@ main.App .app-body .right-body-container {
 @media (max-width: 550px) {
   main.App .app-body .right-body-container {
     padding-top: 15vh;
-  }
-}
-
-@media (max-width: 550px) {
-  main.App .app-body .right-body-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 88%;
+    width: 88%;
   }
 }
 
@@ -525,7 +537,192 @@ main.App .app-body .right-body-container .body-container {
   }
 }
 
-main.App .app-body .right-body-container .body-container .home {
+main.App .app-body .right-body-container .body-container .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main.App .app-body .right-body-container .body-container .page .page-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin-top: 5vh;
+  height: 15vh;
+}
+
+main.App .app-body .right-body-container .body-container .page .page-head .page-icon {
+  font-size: 70px;
+}
+
+main.App .app-body .right-body-container .body-container .page .title {
+  font-size: 30px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .title {
+    font-size: 25px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .filter-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .filter-container div {
+    font-size: 14px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .filter-container select {
+  background-color: transparent;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .filter-container select:focus {
+  outline: none;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .filter-container select {
+    font-size: 14px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .filter-container select option {
+  color: black;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item {
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation: fadeUp 0.5s forwards;
+          animation: fadeUp 0.5s forwards;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item .about-item-head {
+  font-size: 40px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .right-body-container .body-container .page .about-item .about-item-head {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .about-item .about-item-head {
+    margin: 10px 0;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item .about-item-body {
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .right-body-container .body-container .page .about-item .about-item-body {
+    font-size: 15px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc {
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 50vh;
+  border: 2px dashed lightgray;
+  overflow-x: hidden;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .about-item-desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .about-item-desc.write {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+            flex-flow: column-reverse;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.img-con {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.img-con.first {
+  background-image: url("./images/images 1.jpg");
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.img-con.second {
+  background-image: url("./images/images 3.jpg");
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,42 +736,66 @@ main.App .app-body .right-body-container .body-container .home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
+  padding: 0 10px;
+  text-align: center;
 }
 
-main.App .app-body .right-body-container .body-container .home .home-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 90%;
-  margin-top: 5vh;
-  height: 15vh;
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con.first {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: fadeRight 0.5s forwards;
+          animation: fadeRight 0.5s forwards;
 }
 
-main.App .app-body .right-body-container .body-container .home .home-head .title {
-  font-size: 30px;
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con.second {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: fadeLeft 0.5s forwards;
+          animation: fadeLeft 0.5s forwards;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-head {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 550px) {
-  main.App .app-body .right-body-container .body-container .home .home-head .title {
-    font-size: 25px;
+  main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-head {
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 }
 
-main.App .app-body .right-body-container .body-container .home .home-head .filter-container div {
+main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-body {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-body {
+    font-size: 13px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-head {
+  width: 100%;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,31 +811,154 @@ main.App .app-body .right-body-container .body-container .home .home-head .filte
           flex-direction: row;
 }
 
-@media (max-width: 550px) {
-  main.App .app-body .right-body-container .body-container .home .home-head .filter-container div {
-    font-size: 14px;
-  }
-}
-
-main.App .app-body .right-body-container .body-container .home .home-head .filter-container select {
-  background-color: transparent;
-  width: 100%;
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-head span {
+  font-size: 20px;
   padding: 5px;
-  border-radius: 5px;
 }
 
-main.App .app-body .right-body-container .body-container .home .home-head .filter-container select:focus {
-  outline: none;
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 80%;
+  max-width: 90%;
+  min-height: 60vh;
+  height: auto;
+  margin-bottom: 30px;
 }
 
-@media (max-width: 550px) {
-  main.App .app-body .right-body-container .body-container .home .home-head .filter-container select {
-    font-size: 14px;
+@media (max-width: 800px) {
+  main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-main.App .app-body .right-body-container .body-container .home .home-head .filter-container select option {
-  color: black;
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con .about-admins-main-con-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50vh;
+  margin: 0 5px;
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con .about-admins-main-con-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con .about-admins-main-con-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con .about-admins-main-con-item .about-admins-desc {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .about-admins-con .about-admins-main-con .about-admins-main-con-item .about-admins-main-text {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form {
+  margin-bottom: 30px;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form label {
+  width: 100px;
+  height: 100px;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form label .label-title {
+  font-size: 13px;
+  margin: 20px 0 5px 0;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form label input,
+main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
+  width: 30vw;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background: transparent;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .contact-form-con form label input,
+  main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
+    width: 70vw;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
+  width: 50vw;
+  height: 30vh;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
+    width: 80vw;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con form .btn {
+  width: 20%;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con .socials-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con .socials-con .social {
+  padding: 10px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .contact-form-con .socials-con .social .icon {
+  color: white;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1011,10 +1355,11 @@ main.App .breadCrumb-container {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   min-height: 30px;
   height: auto;
   padding: 10px;
+  border-radius: 3px;
   background-color: rgba(194, 184, 184, 0.315);
 }
 

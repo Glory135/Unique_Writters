@@ -29,7 +29,7 @@
     }
     & .search-container {
       @include position(center, center);
-      background-color: rgba(255, 255, 255, 0.319);
+      // background-color: rgba(255, 255, 255, 0.319);
       padding: 7px 10px;
       border-radius: 30px;
       &:hover,
@@ -51,15 +51,12 @@
         &:focus {
           outline: none;
         }
-        @include sm {
-          width: 45vw;
-          display: none;
-        }
       }
       & .cancel {
         @include position;
         & .cancel-icon {
-          font-size: 18px;
+          font-size: 25px;
+          cursor: pointer;
         }
       }
     }
@@ -101,31 +98,7 @@
         }
       }
     }
-    & .loginBtn {
-      @include position(center, _);
-      color: white;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 15px;
-      @include sm {
-        font-weight: lighter;
-        font-size: 16px;
-      }
-      &:hover {
-        box-shadow: $shadow-bottom;
-        transform: translateY(-5px);
-        cursor: pointer;
-      }
-      &:active {
-        transform: translateY(0);
-      }
-      & .logIcon {
-        @include sm {
-          display: none;
-        }
-      }
-    }
+
     & .top-profile-container {
       @include position(center, _);
 
