@@ -3,6 +3,7 @@ import { SingleListItem } from "./SingleListItem";
 import { writers } from "../../data";
 import { Button } from "@material-ui/core";
 import { Context } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 export const WritersList = () => {
   const { theme } = useContext(Context);
@@ -16,9 +17,11 @@ export const WritersList = () => {
       {writers.slice(0, 10).map((writer, index) => {
         return <SingleListItem key={index} writer={writer} />;
       })}
-      <Button color='primary' size='small'>
-        Show More
-      </Button>
+      <Link className='Link' to='/writers'>
+        <Button color='primary' size='small'>
+          Show More
+        </Button>
+      </Link>
     </div>
   );
 };

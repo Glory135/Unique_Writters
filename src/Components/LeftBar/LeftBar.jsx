@@ -73,10 +73,10 @@ export const LeftBar = () => {
         <PostAdd className={classes.icon && "icons"} />{" "}
         <span style={name}>Apply To Be A Writer </span>
       </Link>
-      <Link className='left-item Link' to='/writters'>
+      <Link className='left-item Link' to='/writers'>
         {" "}
         <Contacts className={classes.icon && "icons"} />{" "}
-        <span style={name}>Writters </span>
+        <span style={name}>Writers </span>
       </Link>
       <Link className='left-item Link' to='/post'>
         {" "}

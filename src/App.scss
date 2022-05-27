@@ -75,7 +75,7 @@ main.App {
           & .page-head {
             @include position(center, space-between);
             width: 90%;
-            margin-top: 5vh;
+            // margin-top: 5vh;
             height: 15vh;
             & .page-icon {
               font-size: 70px;
@@ -84,6 +84,8 @@ main.App {
           @import "./sass/pages/home";
           @import "./sass/pages/about";
           @import "./sass/pages/contact";
+          @import "./sass/pages/application";
+          @import "./sass/pages/allWriters";
         }
       }
 

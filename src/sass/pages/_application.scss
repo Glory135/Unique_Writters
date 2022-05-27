@@ -1,0 +1,68 @@
+& .application-body {
+  @include position(center, _, column);
+  width: 90%;
+  & .application-info {
+    width: 100%;
+    transform: translateX(-100%);
+    animation: fadeLeft 0.5s forwards;
+    & .icon {
+      color: grey;
+    }
+  }
+  & ul {
+    width: 90%;
+    transform: translateX(100%);
+    animation: fadeRight 0.5s forwards;
+  }
+  & form {
+    padding: 30px 20px;
+    width: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    transform: scale(0);
+    animation: pop 0.5s forwards;
+    & i {
+      color: red;
+      font-size: 11px;
+    }
+    & label {
+      & .label-title {
+        font-size: 13px;
+        margin: 20px 0 5px 0;
+      }
+      & input,
+      & textarea {
+        width: 30vw;
+        height: 35px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        background: transparent;
+        @include sm {
+          width: 70vw;
+        }
+      }
+      & textarea {
+        width: 30vw;
+        height: 30vh;
+        padding: 10px;
+        @include sm {
+          width: 70vw;
+        }
+      }
+    }
+    & .btn-container {
+      width: 100%;
+      @include position;
+      & .btn {
+        width: 80%;
+        margin-top: 20px;
+        background-color: transparent;
+        .icon {
+          margin-left: 10px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

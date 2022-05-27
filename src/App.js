@@ -12,8 +12,10 @@ import { TopBar } from "./Components/TopBar/TopBar";
 import { Context } from "./Context/Context";
 import NotFound from "./Pages/404/NotFound";
 import { About } from "./Pages/About/About";
+import WriterApplication from "./Pages/Application/WriterApplication";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
+import AllWriters from "./Pages/Writers/AllWriters";
 
 function App() {
   const { theme } = useContext(Context);
@@ -50,9 +52,19 @@ function App() {
         <div className='right-body-container'>
           <div className='body-container'>
             <Routes>
+              {/* home */}
               <Route exact path='/' element={<Home />} />
+              {/* about */}
               <Route path='/about' element={<About />} />
+              {/* contact */}
               <Route path='/contact' element={<Contact />} />
+              {/* Writer application */}
+              <Route
+                path='/writerApplication'
+                element={<WriterApplication />}
+              />
+              {/* All writers */}
+              <Route path='/writers' element={<AllWriters />} />
               {/* 404 */}
               <Route path='*' element={<NotFound />} />
             </Routes>

@@ -19,6 +19,8 @@
         border-radius: 5px;
         border: 1px solid grey;
         background: transparent;
+        transform: translateX(-100%);
+        animation: fadeLeft 0.5s forwards;
         @include sm {
           width: 70vw;
         }
@@ -27,6 +29,8 @@
         width: 50vw;
         height: 30vh;
         padding: 10px;
+        transform: translateX(100%);
+        animation: fadeRight 0.5s forwards;
         @include sm {
           width: 80vw;
         }

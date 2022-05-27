@@ -49,24 +49,24 @@
 @-webkit-keyframes fadeLeft {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0) translateY(-100%);
-            transform: scale(0) translateY(-100%);
+    -webkit-transform: scale(0) translateX(-100%);
+            transform: scale(0) translateX(-100%);
   }
   100% {
-    -webkit-transform: scale(1) translateY(0%);
-            transform: scale(1) translateY(0%);
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
   }
 }
 
 @keyframes fadeLeft {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0) translateY(-100%);
-            transform: scale(0) translateY(-100%);
+    -webkit-transform: scale(0) translateX(-100%);
+            transform: scale(0) translateX(-100%);
   }
   100% {
-    -webkit-transform: scale(1) translateY(0%);
-            transform: scale(1) translateY(0%);
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
   }
 }
 
@@ -572,7 +572,6 @@ main.App .app-body .right-body-container .body-container .page .page-head {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 90%;
-  margin-top: 5vh;
   height: 15vh;
 }
 
@@ -913,6 +912,10 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
   border-radius: 5px;
   border: 1px solid grey;
   background: transparent;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: fadeLeft 0.5s forwards;
+          animation: fadeLeft 0.5s forwards;
 }
 
 @media (max-width: 550px) {
@@ -926,6 +929,10 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
   width: 50vw;
   height: 30vh;
   padding: 10px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: fadeRight 0.5s forwards;
+          animation: fadeRight 0.5s forwards;
 }
 
 @media (max-width: 550px) {
@@ -959,6 +966,211 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
 
 main.App .app-body .right-body-container .body-container .page .contact-form-con .socials-con .social .icon {
   color: white;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body .application-info {
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: fadeLeft 0.5s forwards;
+          animation: fadeLeft 0.5s forwards;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body .application-info .icon {
+  color: grey;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body ul {
+  width: 90%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: fadeRight 0.5s forwards;
+          animation: fadeRight 0.5s forwards;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form {
+  padding: 30px 20px;
+  width: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: pop 0.5s forwards;
+          animation: pop 0.5s forwards;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form i {
+  color: red;
+  font-size: 11px;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form label .label-title {
+  font-size: 13px;
+  margin: 20px 0 5px 0;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form label input,
+main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
+  width: 30vw;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background: transparent;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .application-body form label input,
+  main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
+    width: 70vw;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
+  width: 30vw;
+  height: 30vh;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
+    width: 70vw;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form .btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form .btn-container .btn {
+  width: 80%;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+main.App .app-body .right-body-container .body-container .page .application-body form .btn-container .btn .icon {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body {
+  width: 100%;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 20vh;
+  width: 80%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+          box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+  padding: 0 20px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter {
+    width: 90%;
+    height: 25vh;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter img {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .line {
+  width: 1px;
+  height: 80%;
+  background-color: grey;
+  margin: 0 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 75%;
+  width: auto;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .details-item {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .details-item.name {
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .details-item.name:hover {
+  color: red;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .details-item.name span {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .btn {
+  background: lightblue;
+  text-transform: lowercase;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1194,7 +1406,7 @@ main.App .paginate-btn-container {
           flex-direction: row;
   min-height: 100px;
   height: auto;
-  width: 100%;
+  width: 95%;
 }
 
 main.App .paginate-btn-container .paginationBtn {
@@ -1219,10 +1431,10 @@ main.App .paginate-btn-container .paginationBtn {
 main.App .paginate-btn-container .paginationBtn li {
   font-weight: bold;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px;
   margin: 10px;
   cursor: pointer;
-  border: 3px solid #6200ee;
+  border: 1px solid #6200ee;
 }
 
 @media (max-width: 800px) {

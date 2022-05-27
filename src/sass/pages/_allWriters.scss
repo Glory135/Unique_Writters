@@ -1,0 +1,55 @@
+& .writers-body {
+  width: 100%;
+  & .singleWriter {
+    @include position(center, _);
+    height: 20vh;
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: $shadow-sm;
+    padding: 0 20px;
+    // cursor: pointer;
+    @include sm {
+      width: 90%;
+      height: 25vh;
+    }
+
+    & img {
+      width: 75px;
+      height: 75px;
+      border-radius: 20px;
+    }
+    & .line {
+      width: 1px;
+      height: 80%;
+      background-color: grey;
+      margin: 0 10px;
+    }
+    & .details-container {
+      @include position(flex-start, flex-start, column);
+      height: 75%;
+      width: auto;
+      //   border: 1px solid red;
+      & .details-item {
+        margin-bottom: 5px;
+        font-size: 12px;
+        &.name {
+          font-size: 17px;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            color: red;
+          }
+          & span {
+            font-size: 12px;
+            font-weight: lighter;
+          }
+        }
+      }
+      .btn {
+        background: lightblue;
+        text-transform: lowercase;
+      }
+    }
+  }
+}

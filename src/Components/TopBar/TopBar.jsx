@@ -1,12 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../Context/Context";
-import {
-  Cancel,
-  ExitToApp,
-  Notifications,
-  Person,
-  Search,
-} from "@material-ui/icons";
+import { Cancel, Person, Search } from "@material-ui/icons";
 import { AppBar, Button, makeStyles } from "@material-ui/core";
 import sun from "../../images/icon-sun.svg";
 import moon from "../../images/icon-moon.svg";
@@ -108,12 +102,6 @@ export const TopBar = ({ setOpenLoginModal }) => {
         </Button>
 
         {/* <div className='top-profile-container '>
-          <div className='top-profile-con notification'>
-            <div className='top-profile-main-container'>
-              <Notifications />
-              <div className='badge'>3</div>
-            </div>
-          </div>
           <div className='top-profile-con'>
             <div className='top-profile-main-container'>
               <Person />
