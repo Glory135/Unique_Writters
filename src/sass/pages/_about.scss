@@ -2,8 +2,8 @@
   text-align: center;
   width: 100%;
   padding: 0 20px;
-  transform: translateY(100%);
-  animation: fadeUp 0.5s forwards;
+  animation: fadeUp 0.5s;
+
   & .about-item-head {
     font-size: 40px;
     margin: 20px 0;
@@ -57,12 +57,10 @@
       padding: 0 10px;
       text-align: center;
       &.first {
-        transform: translateX(100%);
-        animation: fadeRight 0.5s forwards;
+        animation: fadeRight 0.5s;
       }
       &.second {
-        transform: translateX(-100%);
-        animation: fadeLeft 0.5s forwards;
+        animation: fadeLeft 0.5s;
       }
 
       & .about-item-desc-text-head {

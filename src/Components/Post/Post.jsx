@@ -8,12 +8,13 @@ import {
   CardActions,
 } from "@material-ui/core";
 import { Context } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 export const Post = ({ data }) => {
   const { theme } = useContext(Context);
   return (
     <Card className='post'>
-      <div className='post-action-container'>
+      <Link to='/singlePost' className='Link post-action-container'>
         <CardMedia className='post-media' image={data} title='post' />
         <CardContent
           style={{ backgroundColor: theme.tertiary, color: theme.text }}
@@ -36,12 +37,14 @@ export const Post = ({ data }) => {
             numquam accusantium iure sit soluta et reiciendis eaque.
           </Typography>
         </CardContent>
-      </div>
+      </Link>
 
       <CardActions style={{ backgroundColor: theme.bg }}>
-        <Button size='small' color='primary'>
-          Continue Reading
-        </Button>
+        <Link to='/singlePost' className='Link'>
+          <Button size='small' color='primary'>
+            Continue Reading
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );

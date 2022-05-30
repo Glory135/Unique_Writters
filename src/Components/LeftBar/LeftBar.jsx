@@ -12,7 +12,7 @@ import {
   ExitToApp,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -24,15 +24,24 @@ export const LeftBar = () => {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(Context);
   const classes = useStyles({ color: theme.primary });
-  const name = {
-    display: open ? "block" : "none",
+  const { pathname } = useLocation();
+  const location = pathname.split("/")[1];
+
+  const styles = {
+    name: {
+      display: open ? "block" : "none",
+    },
+    leftItem: (name) => {
+      return {
+        backgroundColor:
+          name === location ? "rgba(255, 255, 255, 0.371)" : "inherit",
+      };
+    },
   };
+
   return (
     <div style={{ backgroundColor: theme.primary }} className='leftBar'>
-      <div
-        style={{ backgroundColor: theme.primary }}
-        className='left-item menu'
-      >
+      <div className='left-item menu'>
         {" "}
         <CancelOutlined
           style={{
@@ -53,39 +62,70 @@ export const LeftBar = () => {
           className='menu-icon'
         />
       </div>
-      <Link style={{ marginTop: "70px" }} className='left-item Link' to='/'>
+
+      <Link
+        style={{ marginTop: "70px", ...styles.leftItem("") }}
+        className='left-item Link'
+        to='/'
+      >
         {" "}
         <Home className={classes.icon && "icons"} />{" "}
-        <span style={name}>Home</span>{" "}
+        <span style={styles.name}>Home</span>{" "}
       </Link>
-      <Link className='left-item Link' to='/about'>
+
+      <Link
+        style={styles.leftItem("about")}
+        className='left-item Link'
+        to='/about'
+      >
         {" "}
         <Info className={classes.icon && "icons"} />{" "}
-        <span style={name}>About Us </span>
+        <span style={styles.name}>About Us </span>
       </Link>
-      <Link className='left-item Link' to='/contact'>
+
+      <Link
+        style={styles.leftItem("contact")}
+        className='left-item Link'
+        to='/contact'
+      >
         {" "}
         <ContactSupport className={classes.icon && "icons"} />
-        <span style={name}>Contact Us </span>
+        <span style={styles.name}>Contact Us </span>
       </Link>
-      <Link className='left-item Link' to='/writerApplication'>
+
+      <Link
+        style={styles.leftItem("writerApplication")}
+        className='left-item Link'
+        to='/writerApplication'
+      >
         {" "}
         <PostAdd className={classes.icon && "icons"} />{" "}
-        <span style={name}>Apply To Be A Writer </span>
+        <span style={styles.name}>Apply To Be A Writer </span>
       </Link>
-      <Link className='left-item Link' to='/writers'>
+
+      <Link
+        style={styles.leftItem("writers")}
+        className='left-item Link'
+        to='/writers'
+      >
         {" "}
         <Contacts className={classes.icon && "icons"} />{" "}
-        <span style={name}>Writers </span>
+        <span style={styles.name}>Writers </span>
       </Link>
-      <Link className='left-item Link' to='/post'>
+
+      <Link
+        style={styles.leftItem("post")}
+        className='left-item Link'
+        to='/post'
+      >
         {" "}
         <Add className={classes.icon && "icons"} />{" "}
-        <span style={name}>Write </span>
+        <span style={styles.name}>Write </span>
       </Link>
+
       <div className='left-item' to='/'>
         <ExitToApp className={classes.icon && "icons"} />{" "}
-        <span style={name}>LogOut </span>
+        <span style={styles.name}>LogOut </span>
       </div>
     </div>
   );

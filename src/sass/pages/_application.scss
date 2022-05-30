@@ -3,24 +3,21 @@
   width: 90%;
   & .application-info {
     width: 100%;
-    transform: translateX(-100%);
-    animation: fadeLeft 0.5s forwards;
+    animation: fadeLeft 0.5s;
     & .icon {
       color: grey;
     }
   }
   & ul {
     width: 90%;
-    transform: translateX(100%);
-    animation: fadeRight 0.5s forwards;
+    animation: fadeRight 0.5s;
   }
   & form {
     padding: 30px 20px;
     width: auto;
     margin-top: 30px;
     border-radius: 10px;
-    transform: scale(0);
-    animation: pop 0.5s forwards;
+    animation: pop 0.5s;
     & i {
       color: red;
       font-size: 11px;

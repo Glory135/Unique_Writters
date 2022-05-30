@@ -450,6 +450,7 @@ main.App .app-body .left-container .leftBar .left-item {
   min-width: 100%;
   height: 50px;
   padding: 0 20px;
+  border: 2px solid transparent;
 }
 
 @media (max-width: 800px) {
@@ -459,12 +460,12 @@ main.App .app-body .left-container .leftBar .left-item {
 }
 
 main.App .app-body .left-container .leftBar .left-item:hover {
-  background-color: rgba(255, 255, 255, 0.371);
+  border-color: rgba(255, 255, 255, 0.371);
   cursor: pointer;
 }
 
 main.App .app-body .left-container .leftBar .left-item:active {
-  background-color: transparent;
+  border-color: transparent;
   -webkit-transition: 0;
   transition: 0;
 }
@@ -472,6 +473,14 @@ main.App .app-body .left-container .leftBar .left-item:active {
 main.App .app-body .left-container .leftBar .left-item.menu {
   height: 70px;
   position: absolute;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.App .app-body .left-container .leftBar .left-item.menu:hover {
+  cursor: default;
+  border-color: transparent;
 }
 
 main.App .app-body .left-container .leftBar .left-item .menu-icon {
@@ -479,6 +488,7 @@ main.App .app-body .left-container .leftBar .left-item .menu-icon {
   transition: 0.3s;
   position: absolute;
   font-size: 30px;
+  cursor: pointer;
 }
 
 main.App .app-body .left-container .leftBar .left-item .icons {
@@ -555,6 +565,11 @@ main.App .app-body .right-body-container .body-container .page {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 30px;
+}
+
+main.App .app-body .right-body-container .body-container .page::-webkit-scrollbar {
+  display: none;
 }
 
 main.App .app-body .right-body-container .body-container .page .page-head {
@@ -636,10 +651,8 @@ main.App .app-body .right-body-container .body-container .page .about-item {
   text-align: center;
   width: 100%;
   padding: 0 20px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-animation: fadeUp 0.5s forwards;
-          animation: fadeUp 0.5s forwards;
+  -webkit-animation: fadeUp 0.5s;
+          animation: fadeUp 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .about-item .about-item-head {
@@ -740,17 +753,13 @@ main.App .app-body .right-body-container .body-container .page .about-item-desc 
 }
 
 main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con.first {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: fadeRight 0.5s forwards;
-          animation: fadeRight 0.5s forwards;
+  -webkit-animation: fadeRight 0.5s;
+          animation: fadeRight 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con.second {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-animation: fadeLeft 0.5s forwards;
-          animation: fadeLeft 0.5s forwards;
+  -webkit-animation: fadeLeft 0.5s;
+          animation: fadeLeft 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-head {
@@ -912,10 +921,8 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
   border-radius: 5px;
   border: 1px solid grey;
   background: transparent;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-animation: fadeLeft 0.5s forwards;
-          animation: fadeLeft 0.5s forwards;
+  -webkit-animation: fadeLeft 0.5s;
+          animation: fadeLeft 0.5s;
 }
 
 @media (max-width: 550px) {
@@ -929,10 +936,8 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
   width: 50vw;
   height: 30vh;
   padding: 10px;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: fadeRight 0.5s forwards;
-          animation: fadeRight 0.5s forwards;
+  -webkit-animation: fadeRight 0.5s;
+          animation: fadeRight 0.5s;
 }
 
 @media (max-width: 550px) {
@@ -945,6 +950,7 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
   width: 20%;
   margin-top: 20px;
   background-color: transparent;
+  float: right;
 }
 
 main.App .app-body .right-body-container .body-container .page .contact-form-con .socials-con {
@@ -987,10 +993,8 @@ main.App .app-body .right-body-container .body-container .page .application-body
 
 main.App .app-body .right-body-container .body-container .page .application-body .application-info {
   width: 100%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-animation: fadeLeft 0.5s forwards;
-          animation: fadeLeft 0.5s forwards;
+  -webkit-animation: fadeLeft 0.5s;
+          animation: fadeLeft 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .application-body .application-info .icon {
@@ -999,10 +1003,8 @@ main.App .app-body .right-body-container .body-container .page .application-body
 
 main.App .app-body .right-body-container .body-container .page .application-body ul {
   width: 90%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: fadeRight 0.5s forwards;
-          animation: fadeRight 0.5s forwards;
+  -webkit-animation: fadeRight 0.5s;
+          animation: fadeRight 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .application-body form {
@@ -1010,10 +1012,8 @@ main.App .app-body .right-body-container .body-container .page .application-body
   width: auto;
   margin-top: 30px;
   border-radius: 10px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: pop 0.5s forwards;
-          animation: pop 0.5s forwards;
+  -webkit-animation: pop 0.5s;
+          animation: pop 0.5s;
 }
 
 main.App .app-body .right-body-container .body-container .page .application-body form i {
@@ -1171,6 +1171,253 @@ main.App .app-body .right-body-container .body-container .page .writers-body .si
 main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter .details-container .btn {
   background: lightblue;
   text-transform: lowercase;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .done-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .done-con .done-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .done-con .done-item span {
+  margin: 0 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .post-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 200px;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+          box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+  background-position: center;
+  background-size: cover;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .controller-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 20px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .controller-con .controller-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  margin: 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .controller-con .controller-item:hover {
+  border-color: lightblue;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .controller-con .controller-item span {
+  margin: 0 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .title-con {
+  width: 100%;
+  height: 50px;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .title-con input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 20px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .body-con {
+  margin-top: 20px;
+  width: 100%;
+  height: 150vh;
+  border-bottom: 1px solid grey;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .body-con textarea {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: none;
+  resize: none;
+}
+
+main.App .app-body .right-body-container .body-container .page .write-body .body-con textarea:focus {
+  outline: none;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-img-container {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+          box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+  min-height: 50px;
+  border-bottom: 1px solid grey;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-title-container h3 {
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1338,8 +1585,6 @@ main.App .app-body .right-body-container .right-container .rightBar .story-list-
 main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem img {
   width: 30%;
   height: 100%;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
 }
 
 main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem .singleStoryItem-details-con {

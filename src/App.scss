@@ -60,6 +60,7 @@ main.App {
       }
       & .body-container {
         flex: 2.5;
+
         @include md {
           flex: 2;
         }
@@ -72,6 +73,10 @@ main.App {
           min-height: 100vh;
           width: 100%;
           overflow-x: hidden;
+          margin-bottom: 30px;
+          &::-webkit-scrollbar {
+            display: none;
+          }
           & .page-head {
             @include position(center, space-between);
             width: 90%;
@@ -86,6 +91,8 @@ main.App {
           @import "./sass/pages/contact";
           @import "./sass/pages/application";
           @import "./sass/pages/allWriters";
+          @import "./sass/pages/write";
+          @import "./sass/pages/singlePostPage";
         }
       }
 

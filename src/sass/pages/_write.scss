@@ -1,0 +1,89 @@
+& .write-body {
+  @include position(center, center, column);
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+
+  & .done-con {
+    @include position(center, flex-end);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    & .done-item {
+      @include position;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 5px;
+
+      & span {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  & .post-img-container {
+    @include position;
+    width: 100%;
+    height: 200px;
+    box-shadow: $shadow-sm;
+    background-position: center;
+    background-size: cover;
+  }
+  & .controller-con {
+    @include position(center, flex-start);
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 20px;
+    & .controller-item {
+      @include position;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      margin: 5px;
+      &:hover {
+        border-color: lightblue;
+      }
+      & span {
+        margin: 0 5px;
+      }
+    }
+  }
+  & .title-con {
+    width: 100%;
+    height: 50px;
+    & input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      padding: 0 20px;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 1px solid grey;
+      text-align: center;
+    }
+  }
+  & .body-con {
+    margin-top: 20px;
+    width: 100%;
+    height: 150vh;
+    border-bottom: 1px solid grey;
+
+    & textarea {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      padding: 10px 20px;
+      border: none;
+      resize: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

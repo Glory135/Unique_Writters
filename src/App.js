@@ -1,7 +1,7 @@
 import { Avatar, Container } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
-import { useCallback, useContext, useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { LeftBar } from "./Components/LeftBar/LeftBar";
 import LoginModal from "./Components/Register/LoginModal";
@@ -15,6 +15,8 @@ import { About } from "./Pages/About/About";
 import WriterApplication from "./Pages/Application/WriterApplication";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
+import { SinglePost } from "./Pages/Singles/SinglePost";
+import { Write } from "./Pages/Write/Write";
 import AllWriters from "./Pages/Writers/AllWriters";
 
 function App() {
@@ -65,6 +67,10 @@ function App() {
               />
               {/* All writers */}
               <Route path='/writers' element={<AllWriters />} />
+              {/*  Post */}
+              <Route path='/post' element={<Write />} />
+              {/*  singlePost */}
+              <Route path='/singlePost' element={<SinglePost />} />
               {/* 404 */}
               <Route path='*' element={<NotFound />} />
             </Routes>
@@ -75,13 +81,15 @@ function App() {
           </div>
         </div>
       </div>{" "}
-      <Avatar
-        title='Write'
-        style={{ backgroundColor: theme.secondary }}
-        className='add-circle-btn'
-      >
-        <Add />
-      </Avatar>
+      <Link to='/post' className='Link'>
+        <Avatar
+          title='Write'
+          style={{ backgroundColor: theme.secondary }}
+          className='add-circle-btn'
+        >
+          <Add />
+        </Avatar>
+      </Link>
     </main>
   );
 }

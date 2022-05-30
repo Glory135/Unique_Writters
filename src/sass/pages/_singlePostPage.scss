@@ -1,0 +1,35 @@
+& .singlePost-body {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  & .post-img-container {
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: $shadow-sm;
+  }
+  & .post-title-container {
+    @include position;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+    min-height: 50px;
+    border-bottom: 1px solid grey;
+    & h3 {
+      font-size: 25px;
+      margin: 5px 0;
+    }
+  }
+  & .post-desc-container {
+    @include position(center, space-between);
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

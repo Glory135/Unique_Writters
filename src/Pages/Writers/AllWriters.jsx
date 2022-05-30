@@ -18,7 +18,7 @@ const AllWriters = () => {
         />
       </div>{" "}
       <div className='page-head'>
-        <div className='title'>All Writers</div>
+        <div className='title'>Discover New Writers</div>
         <div className='filter-container'>
           <div>
             {" "}
