@@ -12,8 +12,11 @@
     border: 1px solid lightgray;
 
     &:hover {
-      cursor: pointer;
-      background-color: rgba(255, 255, 255, 0.161);
+      // cursor: pointer;
+      background-color: rgba(126, 124, 124, 0.068);
+    }
+    &:action {
+      background-color: rgba(80, 80, 80, 0.068);
     }
 
     & img {

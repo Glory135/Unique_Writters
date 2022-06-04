@@ -1,0 +1,12 @@
+& .thread-head {
+  @include position;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+& .thread-body {
+  @include postion(center, center, column);
+  width: 100%;
+  padding: 20px;
+}

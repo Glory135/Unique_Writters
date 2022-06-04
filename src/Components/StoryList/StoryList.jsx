@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { SingleStoryItem } from "./SingleStoryItem";
 import { data } from "../../data";
 import { Context } from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 export const StoryList = () => {
   const { theme } = useContext(Context);
@@ -12,7 +13,11 @@ export const StoryList = () => {
         Stories
       </div>
       {data.slice(0, 5).map((i, index) => {
-        return <SingleStoryItem key={index} item={i} />;
+        return (
+          <Link key={index} className='Link' to='/singlePost'>
+            <SingleStoryItem item={i} />
+          </Link>
+        );
       })}
     </div>
   );

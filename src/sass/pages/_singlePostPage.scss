@@ -22,14 +22,69 @@
     }
   }
   & .post-desc-container {
-    @include position(center, space-between);
+    @include position(flex-start, space-between);
     flex-wrap: wrap;
     width: 100%;
     height: auto;
     padding: 0 15px;
+    margin-bottom: 20px;
+
     @include sm {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: flex-start;
+    }
+    & .post-desc-item {
+      color: rgb(255, 79, 15);
+      font-size: 11px;
+      @include sm {
+        margin-bottom: 5px;
+      }
+      &.actions {
+        display: flex;
+        & .action-item {
+          display: flex;
+          font-size: 10px;
+          // margin-left: 10px;
+          padding: 5px 10px;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: lightgrey;
+            cursor: pointer;
+          }
+          &:active {
+            background-color: grey;
+          }
+
+          & .icon {
+            // font-size: 15px;
+            margin-right: 2px;
+            color: blue;
+          }
+          & span {
+            @include position;
+            padding: 3px 5px;
+            border-radius: 20px;
+            color: white;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  & .body {
+    padding-left: 20px;
+    padding-right: 10px;
+    line-height: 25px;
+    font-size: 17px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    &::first-letter {
+      font-size: 50px;
+      color: red;
+      margin-left: 30px;
+      margin-right: 5px;
     }
   }
 }

@@ -16,6 +16,7 @@ import WriterApplication from "./Pages/Application/WriterApplication";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
 import { SinglePost } from "./Pages/Singles/SinglePost";
+import { Thread } from "./Pages/Thread/Thread";
 import { Write } from "./Pages/Write/Write";
 import AllWriters from "./Pages/Writers/AllWriters";
 
@@ -71,6 +72,8 @@ function App() {
               <Route path='/post' element={<Write />} />
               {/*  singlePost */}
               <Route path='/singlePost' element={<SinglePost />} />
+              {/*  thread */}
+              <Route path='/thread' element={<Thread />} />
               {/* 404 */}
               <Route path='*' element={<NotFound />} />
             </Routes>

@@ -124,6 +124,10 @@ body {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 main.App {
   position: relative;
   width: 100%;
@@ -1391,9 +1395,9 @@ main.App .app-body .right-body-container .body-container .page .singlePost-body 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1406,18 +1410,120 @@ main.App .app-body .right-body-container .body-container .page .singlePost-body 
   width: 100%;
   height: auto;
   padding: 0 15px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 550px) {
   main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item {
+  color: #ff4f0f;
+  font-size: 11px;
+}
+
+@media (max-width: 550px) {
+  main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item {
+    margin-bottom: 5px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions .action-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions .action-item:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions .action-item:active {
+  background-color: grey;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions .action-item .icon {
+  margin-right: 2px;
+  color: blue;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item.actions .action-item span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3px 5px;
+  border-radius: 20px;
+  color: white;
+  font-size: 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .body {
+  padding-left: 20px;
+  padding-right: 10px;
+  line-height: 25px;
+  font-size: 17px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+main.App .app-body .right-body-container .body-container .page .singlePost-body .body::first-letter {
+  font-size: 50px;
+  color: red;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+
+main.App .app-body .right-body-container .body-container .page .thread-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main.App .app-body .right-body-container .body-container .page .thread-body {
+  width: 100%;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1578,8 +1684,11 @@ main.App .app-body .right-body-container .right-container .rightBar .story-list-
 }
 
 main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.161);
+  background-color: rgba(126, 124, 124, 0.068);
+}
+
+main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem:action {
+  background-color: rgba(80, 80, 80, 0.068);
 }
 
 main.App .app-body .right-body-container .right-container .rightBar .story-list-container .storyList .singleStoryItem img {
@@ -1827,6 +1936,48 @@ main.App .breadCrumb-container .breadCrumbs-item {
 
 main.App .breadCrumb-container .breadCrumbs-item:hover {
   color: red;
+}
+
+main.App .comments-container {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+main.App .comments-container .comments-head {
+  padding: 0 5%;
+  width: 1000%;
+  height: 10vh;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main.App .comments-container .comments-head span {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  color: white;
+}
+
+main.App .comments-container .comments-body {
+  width: 100%;
+}
+
+main.App .comments-container .btn-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main.App .add-circle-btn {
