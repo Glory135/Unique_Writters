@@ -46,9 +46,10 @@ main.App {
       padding: 0;
       padding-top: 10vh;
       box-shadow: $shadow-sm;
-      @include sm {
-        padding-top: 15vh;
-      }
+      z-index: 1000;
+      // @include sm {
+      //   padding-top: 15vh;
+      // }
       @import "./sass/components/leftBar";
     }
     & .right-body-container {
@@ -111,7 +112,9 @@ main.App {
   @import "./sass/components/feed";
   @import "./sass/components/post";
   @import "./sass/components/breadCrumbs";
-  @import "./sass/components/comments";
+  @import "./sass/components/comment/comments";
+  @import "./sass/components/comment/singleComment";
+  @import "./sass/components/comment/writeComment";
 
   & .add-circle-btn {
     width: 75px;
@@ -120,6 +123,7 @@ main.App {
     bottom: 50px;
     right: 50px;
     cursor: pointer;
+    z-index: 50;
     &:active {
       transform: scale(0.8);
     }

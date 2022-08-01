@@ -1,0 +1,87 @@
+& .singleComment-container {
+  display: flex;
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 2px 11px 12px 1px rgba(86, 84, 84, 0.77);
+  -webkit-box-shadow: 2px 11px 12px 1px rgba(140, 129, 129, 0.77);
+  -moz-box-shadow: 2px 11px 12px 1px rgba(140, 129, 129, 0.77);
+  position: relative;
+  z-index: 20;
+
+  @include sm {
+    flex-direction: column;
+  }
+  & .singleComment-profile-img-container {
+    padding: 5px;
+
+    & img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+  & .singleComment-main-comment-container {
+    width: stretch;
+    margin-left: 10px;
+    @include sm {
+      margin: 0;
+    }
+    & .singleComment-main-comment-details {
+      @include position(center, space-between);
+      width: 100%;
+      padding: 5px;
+      & span.username {
+        font-weight: bold;
+        margin-right: 10px;
+        & span.youTag {
+          font-size: 11px;
+          padding: 3px;
+          border-radius: 5px;
+          margin-left: 5px;
+          color: white;
+        }
+      }
+      & span.timestamp{
+        color: lightgrey;
+        font-size: 13px;
+      }
+      & img.reply-logo {
+        margin-right: 5px;
+      }
+      & > div {
+        @include sm {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    & .singleComment-main-comment-body {
+      & span {
+        font-weight: bold;
+        margin-right: 5px;
+        color: #f50057;
+      }
+    }
+    & .singleComment-main-comment-bottom {
+      display: flex;
+      margin-top: 10px;
+      border-top: 1px solid grey;
+      padding-top: 5px;
+
+      & > * {
+        margin-right: 5px;
+      }
+
+      & .count {
+        padding: 0 5px;
+        height: 50%;
+        border-radius: 50%;
+        font-size: 12px;
+        color: white;
+        margin-left: 3px;
+      }
+    }
+  }
+}

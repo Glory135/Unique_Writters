@@ -157,12 +157,6 @@ main.App .topBar {
   transition: 0.2s;
 }
 
-@media (max-width: 550px) {
-  main.App .topBar {
-    height: 15vh;
-  }
-}
-
 main.App .topBar .topBar-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,7 +199,27 @@ main.App .topBar .topBar-container .logo span {
   }
 }
 
-main.App .topBar .topBar-container .search-container {
+main.App .topBar .topBar-container .topbar-second-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.App .topBar .topBar-container .topbar-second-container > * {
+  margin-right: 10px;
+}
+
+main.App .topBar .topBar-container .topbar-second-container .search-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,17 +237,17 @@ main.App .topBar .topBar-container .search-container {
   border-radius: 30px;
 }
 
-main.App .topBar .topBar-container .search-container:hover, main.App .topBar .topBar-container .search-container:focus {
+main.App .topBar .topBar-container .topbar-second-container .search-container:hover, main.App .topBar .topBar-container .topbar-second-container .search-container:focus {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 550px) {
-  main.App .topBar .topBar-container .search-container {
+  main.App .topBar .topBar-container .topbar-second-container .search-container {
     padding: 5px;
   }
 }
 
-main.App .topBar .topBar-container .search-container input {
+main.App .topBar .topBar-container .topbar-second-container .search-container input {
   margin-left: 10px;
   width: 50vw;
   color: white;
@@ -243,11 +257,11 @@ main.App .topBar .topBar-container .search-container input {
   font-size: 15px;
 }
 
-main.App .topBar .topBar-container .search-container input:focus {
+main.App .topBar .topBar-container .topbar-second-container .search-container input:focus {
   outline: none;
 }
 
-main.App .topBar .topBar-container .search-container .cancel {
+main.App .topBar .topBar-container .topbar-second-container .search-container .cancel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,12 +277,12 @@ main.App .topBar .topBar-container .search-container .cancel {
           flex-direction: row;
 }
 
-main.App .topBar .topBar-container .search-container .cancel .cancel-icon {
+main.App .topBar .topBar-container .topbar-second-container .search-container .cancel .cancel-icon {
   font-size: 25px;
   cursor: pointer;
 }
 
-main.App .topBar .topBar-container .top-theme-switcher {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher {
   width: 50px;
   height: 25px;
   position: relative;
@@ -280,22 +294,22 @@ main.App .topBar .topBar-container .top-theme-switcher {
 }
 
 @media (max-width: 550px) {
-  main.App .topBar .topBar-container .top-theme-switcher {
+  main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher {
     width: 55px;
     height: 25px;
   }
 }
 
-main.App .topBar .topBar-container .top-theme-switcher:hover {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher:hover {
   cursor: pointer;
 }
 
-main.App .topBar .topBar-container .top-theme-switcher:hover .ball {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher:hover .ball {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-main.App .topBar .topBar-container .top-theme-switcher .ball {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher .ball {
   top: 0;
   left: 0;
   position: absolute;
@@ -305,7 +319,7 @@ main.App .topBar .topBar-container .top-theme-switcher .ball {
   border-radius: 50%;
 }
 
-main.App .topBar .topBar-container .top-theme-switcher .theme-container {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher .theme-container {
   width: 50%;
   height: 100%;
   display: -webkit-box;
@@ -324,52 +338,57 @@ main.App .topBar .topBar-container .top-theme-switcher .theme-container {
   border-radius: 50%;
 }
 
-main.App .topBar .topBar-container .top-theme-switcher .theme-container img {
+main.App .topBar .topBar-container .topbar-second-container .top-theme-switcher .theme-container img {
   width: 90%;
   height: 90%;
 }
 
-main.App .topBar .topBar-container .top-profile-container {
+main.App .topBar .topBar-container .topbar-second-container .top-notification-con {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-main.App .topBar .topBar-container .top-profile-container .top-profile-con {
   margin-left: 20px;
   background-color: rgba(255, 255, 255, 0.4);
-  padding: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
 @media (max-width: 550px) {
-  main.App .topBar .topBar-container .top-profile-container .top-profile-con {
+  main.App .topBar .topBar-container .topbar-second-container .top-notification-con {
     margin: 0;
     padding: 5px;
   }
 }
 
-main.App .topBar .topBar-container .top-profile-container .top-profile-con:hover {
+main.App .topBar .topBar-container .topbar-second-container .top-notification-con:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.26);
 }
 
-main.App .topBar .topBar-container .top-profile-container .top-profile-con .top-profile-main-container {
+main.App .topBar .topBar-container .topbar-second-container .top-notification-con:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main.App .topBar .topBar-container .topbar-second-container .top-notification-con .top-notification-main-container {
   color: white;
   position: relative;
 }
 
-main.App .topBar .topBar-container .top-profile-container .top-profile-con .top-profile-main-container .badge {
+main.App .topBar .topBar-container .topbar-second-container .top-notification-con .top-notification-main-container .badge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,16 +407,30 @@ main.App .topBar .topBar-container .top-profile-container .top-profile-con .top-
   border-radius: 50%;
   background-color: red;
   position: absolute;
-  top: -7.5px;
-  right: -7.5px;
+  top: -10px;
+  right: -10px;
   color: white;
   font-size: 11px;
 }
 
 @media (max-width: 550px) {
-  main.App .topBar .topBar-container .top-profile-container .top-profile-con.notification {
+  main.App .topBar .topBar-container .topbar-second-container .top-notification-con.notification {
     display: none;
   }
+}
+
+main.App .topBar .topBar-container .topbar-second-container .top-profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main.App .topBar .topBar-container .topbar-second-container .top-profile-container img:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main.App .app-body {
@@ -418,12 +451,7 @@ main.App .app-body .left-container {
   padding-top: 10vh;
   -webkit-box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
           box-shadow: 1px 1px 2px 2px rgba(211, 211, 211, 0.307);
-}
-
-@media (max-width: 550px) {
-  main.App .app-body .left-container {
-    padding-top: 15vh;
-  }
+  z-index: 1000;
 }
 
 main.App .app-body .left-container .leftBar {
@@ -1523,7 +1551,21 @@ main.App .app-body .right-body-container .body-container .page .thread-head {
 }
 
 main.App .app-body .right-body-container .body-container .page .thread-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+  padding: 20px;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1959,11 +2001,42 @@ main.App .comments-container .comments-head span {
   color: white;
 }
 
+main.App .comments-container .comments-write-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
 main.App .comments-container .comments-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
 main.App .comments-container .btn-container {
+  margin-top: 20px;
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1980,6 +2053,226 @@ main.App .comments-container .btn-container {
           flex-direction: row;
 }
 
+main.App .reply-container {
+  width: 90%;
+  border-left: 2px solid grey;
+}
+
+main.App .reply-container .reply-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+main.App .reply-container .reply-main-container .thread-line {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  border-bottom: 3px solid grey;
+  position: absolute;
+  z-index: 1;
+}
+
+main.App .singleComment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 2px 11px 12px 1px rgba(86, 84, 84, 0.77);
+  -webkit-box-shadow: 2px 11px 12px 1px rgba(140, 129, 129, 0.77);
+  -moz-box-shadow: 2px 11px 12px 1px rgba(140, 129, 129, 0.77);
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 550px) {
+  main.App .singleComment-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main.App .singleComment-container .singleComment-profile-img-container {
+  padding: 5px;
+}
+
+main.App .singleComment-container .singleComment-profile-img-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  margin-left: 10px;
+}
+
+@media (max-width: 550px) {
+  main.App .singleComment-container .singleComment-main-comment-container {
+    margin: 0;
+  }
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 5px;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details span.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details span.username span.youTag {
+  font-size: 11px;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: white;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details span.timestamp {
+  color: lightgrey;
+  font-size: 13px;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details img.reply-logo {
+  margin-right: 5px;
+}
+
+@media (max-width: 550px) {
+  main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-body span {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #f50057;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  border-top: 1px solid grey;
+  padding-top: 5px;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-bottom > * {
+  margin-right: 5px;
+}
+
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-bottom .count {
+  padding: 0 5px;
+  height: 50%;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  margin-left: 3px;
+}
+
+main.App .writeComment-container {
+  width: 90%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 550px) {
+  main.App .writeComment-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main.App .writeComment-container .user-details-container {
+  padding: 5px;
+}
+
+main.App .writeComment-container .user-details-container img {
+  width: 50px;
+}
+
+main.App .writeComment-container .write-container {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
+main.App .writeComment-container .write-container textarea {
+  width: 100%;
+  height: 30vh;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+@media (max-width: 800px) {
+  main.App .writeComment-container .write-container textarea {
+    height: 20vh;
+  }
+}
+
+main.App .writeComment-container .actions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px 10px;
+}
+
+main.App .writeComment-container .actions-container > * {
+  margin-bottom: 10px;
+}
+
 main.App .add-circle-btn {
   width: 75px;
   height: 75px;
@@ -1987,6 +2280,7 @@ main.App .add-circle-btn {
   bottom: 50px;
   right: 50px;
   cursor: pointer;
+  z-index: 50;
 }
 
 main.App .add-circle-btn:active {

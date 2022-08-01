@@ -4,9 +4,9 @@
   height: 10vh;
   position: fixed;
   transition: 0.2s;
-  @include sm {
-    height: 15vh;
-  }
+  // @include sm {
+  //   height: 15vh;
+  // }
   & .topBar-container {
     @include position(center, space-between);
     width: 90%;
@@ -27,85 +27,87 @@
         }
       }
     }
-    & .search-container {
-      @include position(center, center);
-      // background-color: rgba(255, 255, 255, 0.319);
-      padding: 7px 10px;
-      border-radius: 30px;
-      &:hover,
-      &:focus {
-        background-color: rgba(255, 255, 255, 0.4);
+    & .topbar-second-container {
+      @include position(center, space-between);
+      & > * {
+        margin-right: 10px;
       }
-      @include sm {
-        padding: 5px;
-      }
-
-      & input {
-        margin-left: 10px;
-        width: 50vw;
-        color: white;
-        height: 60%;
-        background-color: transparent;
-        border: none;
-        font-size: 15px;
+      & .search-container {
+        @include position(center, center);
+        // background-color: rgba(255, 255, 255, 0.319);
+        padding: 7px 10px;
+        border-radius: 30px;
+        &:hover,
         &:focus {
-          outline: none;
+          background-color: rgba(255, 255, 255, 0.4);
         }
-      }
-      & .cancel {
-        @include position;
-        & .cancel-icon {
-          font-size: 25px;
-          cursor: pointer;
+        @include sm {
+          padding: 5px;
         }
-      }
-    }
 
-    & .top-theme-switcher {
-      width: 50px;
-      height: 25px;
-      position: relative;
-      display: flex;
-      border: 2px solid white;
-      border-radius: 20px;
-      @include sm {
-        width: 55px;
+        & input {
+          margin-left: 10px;
+          width: 50vw;
+          color: white;
+          height: 60%;
+          background-color: transparent;
+          border: none;
+          font-size: 15px;
+          &:focus {
+            outline: none;
+          }
+        }
+        & .cancel {
+          @include position;
+          & .cancel-icon {
+            font-size: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+      & .top-theme-switcher {
+        width: 50px;
         height: 25px;
-      }
-      &:hover {
-        cursor: pointer;
+        position: relative;
+        display: flex;
+        border: 2px solid white;
+        border-radius: 20px;
+        @include sm {
+          width: 55px;
+          height: 25px;
+        }
+        &:hover {
+          cursor: pointer;
+          & .ball {
+            transform: scale(1.1);
+          }
+        }
         & .ball {
-          transform: scale(1.1);
+          top: 0;
+          left: 0;
+          position: absolute;
+          height: 99%;
+          background-color: white;
+          width: 50%;
+          border-radius: 50%;
+        }
+        & .theme-container {
+          width: 50%;
+          height: 100%;
+          @include position;
+          border-radius: 50%;
+          & img {
+            width: 90%;
+            height: 90%;
+          }
         }
       }
-      & .ball {
-        top: 0;
-        left: 0;
-        position: absolute;
-        height: 99%;
-        background-color: white;
-        width: 50%;
-        border-radius: 50%;
-      }
-      & .theme-container {
-        width: 50%;
-        height: 100%;
+      & .top-notification-con {
         @include position;
-        border-radius: 50%;
-        & img {
-          width: 90%;
-          height: 90%;
-        }
-      }
-    }
-
-    & .top-profile-container {
-      @include position(center, _);
-
-      & .top-profile-con {
         margin-left: 20px;
         background-color: rgba(255, 255, 255, 0.4);
-        padding: 10px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         @include sm {
           margin: 0;
@@ -115,7 +117,11 @@
           cursor: pointer;
           background-color: rgba(255, 255, 255, 0.26);
         }
-        & .top-profile-main-container {
+        &:active{
+          transform: scale(0.8);
+          transition: 0.3s;
+        }
+        & .top-notification-main-container {
           color: white;
           position: relative;
 
@@ -126,8 +132,8 @@
             border-radius: 50%;
             background-color: red;
             position: absolute;
-            top: -7.5px;
-            right: -7.5px;
+            top: -10px;
+            right: -10px;
             color: white;
             font-size: 11px;
           }
@@ -137,6 +143,20 @@
             display: none;
           }
         }
+      }
+
+      & .top-profile-container {
+        & img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          cursor: pointer;
+          &:active{
+            transform: scale(0.8);
+            transition: 0.3s;
+          }
+        }
+        
       }
     }
   }

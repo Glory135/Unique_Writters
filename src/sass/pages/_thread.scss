@@ -6,7 +6,7 @@
   font-weight: bold;
 }
 & .thread-body {
-  @include postion(center, center, column);
+  @include position(center, center, column);
   width: 100%;
   padding: 20px;
 }
