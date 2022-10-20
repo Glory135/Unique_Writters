@@ -14,12 +14,14 @@ export const ContextProvider = ({ children }) => {
   // to check theme after page reload
   const currentTheme = localStorage.getItem("theme");
   const themeCheck = useCallback(() => {
+    // const system_default_theme = window.matchMedia("(prefers-color-scheme: dark)");
     if (currentTheme === "dark") {
       themeDispatch({ type: "DARK_MODE" });
     } else if (currentTheme === "light") {
       themeDispatch({ type: "LIGHT_MODE" });
     }
   }, [currentTheme]);
+
   useEffect(() => {
     themeCheck();
   }, [themeCheck]);

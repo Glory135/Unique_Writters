@@ -17,7 +17,7 @@ const Comments = () => {
         COMMENTS <span style={{ backgroundColor: theme.primary }}>250</span>
       </div>
       <div className='comments-write-container'>
-        <WriteComment user={user} />
+        <WriteComment user={user} replyMode={false} />
       </div>
       <div className='comments-body'>
         {allComments.slice(0, 4).map((singleComment, index) => {
@@ -25,17 +25,20 @@ const Comments = () => {
             <>
               <SingleComment key={index} comment={singleComment} user={user} />
               <div className='reply-container'>
-                {singleComment.replies.slice(0, 2).map((singleReply, index2) => {
-                  return (<div className="reply-main-container">
-                  <div className="thread-line"></div>
-                    <SingleComment
-                      key={index2}
-                      comment={singleReply}
-                      user={user}
-                    />
-                    </div>
-                  );
-                })}
+                {singleComment.replies
+                  .slice(0, 2)
+                  .map((singleReply, index2) => {
+                    return (
+                      <div className='reply-main-container'>
+                        <div className='thread-line'></div>
+                        <SingleComment
+                          key={index2}
+                          comment={singleReply}
+                          user={user}
+                        />
+                      </div>
+                    );
+                  })}
               </div>
             </>
           );

@@ -1,12 +1,16 @@
 import { Button } from "@material-ui/core";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../Context/Context";
 // import DP from "../../images/DP.svg";
 import replyLogo from "../../images/icon-reply.svg";
+import { WriteComment } from "./WriteComment";
+
 
 export const SingleComment = ({ user, comment }) => {
   const { theme, dark } = useContext(Context);
+  const [replyMode, setReplyMode] = useState(false);
+
   return (
     <div
       style={{ backgroundColor: dark ? theme.primary : theme.bg }}
@@ -32,7 +36,7 @@ export const SingleComment = ({ user, comment }) => {
             <span className='timestamp'>{comment.createdAt}</span>
           </div>
           <div>
-            <Button size='small' color='primary'>
+            <Button size='small' color='primary' onClick={()=>setReplyMode(!replyMode)}>
               {" "}
               <img src={replyLogo} alt='reply' className='reply-logo' /> Reply
             </Button>
@@ -60,6 +64,9 @@ export const SingleComment = ({ user, comment }) => {
             </Button>
           )}
         </div>
+      </div>
+      <div style={{display : replyMode ? 'block' : 'none'}} >
+        <WriteComment user={user} replyMode={true} setReplyMode={setReplyMode} />
       </div>
     </div>
   );
