@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Feed } from "../../Components/Feed/Feed";
-import { data } from "../../data";
+import { data } from "../../Data/data";
 import { Sort } from "@material-ui/icons";
 import { Context } from "../../Context/Context";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";

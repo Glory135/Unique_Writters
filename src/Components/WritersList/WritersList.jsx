@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SingleListItem } from "./SingleListItem";
-import { writers } from "../../data";
+import { writers } from "../../Data/data";
 import { Button } from "@material-ui/core";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";

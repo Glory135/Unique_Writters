@@ -2273,4 +2273,94 @@ main.App .add-circle-btn:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
+
+.notifications-body-container {
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notifications-body-container .singleNotification {
+  width: 90%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+  .notifications-body-container .singleNotification {
+    width: 100%;
+  }
+}
+
+.notifications-body-container .singleNotification .singleNotification-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.notifications-body-container .singleNotification .singleNotification-head .singleNotification-head-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.notifications-body-container .singleNotification .singleNotification-head .singleNotification-head-first img.notificationImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.notifications-body-container .singleNotification .singleNotification-head .singleNotification-head-first .notificationer-name {
+  margin-left: 15px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.notifications-body-container .singleNotification .singleNotification-head .notificationDelete {
+  cursor: pointer;
+  color: red;
+}
+
+.notifications-body-container .singleNotification .singleNotification-body {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.notifications-body-container .singleNotification .notification-timestamp {
+  font-size: 12px;
+  color: #c4c4c4;
+}
 /*# sourceMappingURL=App.css.map */

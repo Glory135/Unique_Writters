@@ -2,7 +2,7 @@ import { Button, Container, makeStyles, Modal } from "@material-ui/core";
 import React, { useContext } from "react";
 import { Context } from "../../Context/Context";
 import { CancelOutlined } from "@material-ui/icons";
-import { modalStyle } from "./style";
+import { modalStyle } from "../modalStyles";
 
 const useStyles = makeStyles((theme) => modalStyle(theme));
 

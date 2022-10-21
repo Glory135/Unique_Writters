@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { LeftBar } from "./Components/LeftBar/LeftBar";
+import Notifications from "./Components/Notifications/Notifications";
 import LoginModal from "./Components/Register/LoginModal";
 import SignUpModal from "./Components/Register/SignUpModal";
 import { RightBar } from "./Components/RightBar/RightBar";
@@ -24,27 +25,39 @@ function App() {
   const { theme } = useContext(Context);
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [openSignUpModal, setOpenSignUpModal] = useState(false);
+  const [openNotifications, setOpenNotifications] = useState(false);
 
   return (
     <main
       style={{ backgroundColor: theme.bg, color: theme.text }}
       className='App'
     >
+
       <ScrollToTop />
+
       <div id='top' className='top-container'>
-        <TopBar setOpenLoginModal={setOpenLoginModal} />
+        <TopBar setOpenNotifications={setOpenNotifications} setOpenLoginModal={setOpenLoginModal} />
       </div>
+
       <LoginModal
         openLoginModal={openLoginModal}
         setOpenLoginModal={setOpenLoginModal}
         setOpenSignUpModal={setOpenSignUpModal}
       />
+
       <SignUpModal
         openSignUpModal={openSignUpModal}
         setOpenSignUpModal={setOpenSignUpModal}
         setOpenLoginModal={setOpenLoginModal}
       />
+
+      <Notifications 
+      openNotifications={openNotifications}
+      setOpenNotifications={setOpenNotifications}
+      />
+
       <div className='app-body'>
+
         <Container
           style={{ backgroundColor: theme.bg }}
           className='left-container'
@@ -83,7 +96,8 @@ function App() {
             <RightBar />
           </div>
         </div>
-      </div>{" "}
+      </div>
+      {" "}
       <Link to='/post' className='Link'>
         <Avatar
           title='Write'

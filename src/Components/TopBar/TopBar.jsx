@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TopBar = ({ setOpenLoginModal }) => {
+export const TopBar = ({ setOpenLoginModal, setOpenNotifications }) => {
   const [openSearch, setOpenSearch] = useState(false);
   const { light, dark, theme, themeDispatch } = useContext(Context);
   const classes = useStyles();
@@ -109,8 +109,14 @@ export const TopBar = ({ setOpenLoginModal }) => {
               display: openSearch ? "none" : "flex",
             }}
             className='top-notification-con'
+            onClick={()=>{
+                setOpenNotifications(true)
+              }}
           >
-            <div className='top-notification-main-container'>
+            <div 
+              className='top-notification-main-container'
+              
+            >
               <Notifications />
               <div className='badge'>3</div>
             </div>

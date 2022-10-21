@@ -2,7 +2,7 @@ import { Sort } from "@material-ui/icons";
 import React, { useContext } from "react";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";
 import { Context } from "../../Context/Context";
-import { writers } from "../../data";
+import { writers } from "../../Data/data";
 import AllWritersList from "./AllWritersList";
 
 const AllWriters = () => {

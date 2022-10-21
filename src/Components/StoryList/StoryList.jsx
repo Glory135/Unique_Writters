@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SingleStoryItem } from "./SingleStoryItem";
-import { data } from "../../data";
+import { data } from "../../Data/data";
 import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
 

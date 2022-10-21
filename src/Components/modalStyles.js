@@ -22,6 +22,16 @@ export const modalStyle = (theme) => ({
       overflow: "scroll",
     },
   },
+  biggerContainer: {
+    width: '70%',
+    height: '80%',
+    [theme.breakpoints.down("sm")]: {
+      width: "95vw",
+      height: "90%",
+      padding: "10px",
+      overflow: "scroll",
+    },
+  },
   signCon: {
     height: 500,
     width: 600,
