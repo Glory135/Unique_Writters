@@ -47,9 +47,7 @@ main.App {
       padding-top: 10vh;
       box-shadow: $shadow-sm;
       z-index: 1000;
-      // @include sm {
-      //   padding-top: 15vh;
-      // }
+
       @import "./sass/components/leftBar";
     }
     & .right-body-container {
