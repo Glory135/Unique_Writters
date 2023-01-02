@@ -1,7 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Context } from '../../Context/Context';
-import { CancelOutlined, Notifications, Search } from '@material-ui/icons';
-import { AppBar, Button, makeStyles, Menu } from '@material-ui/core';
+import {
+	CancelOutlined,
+	Notifications,
+	Search,
+	Menu,
+} from '@material-ui/icons';
+import { AppBar, Button, makeStyles } from '@material-ui/core';
 import sun from '../../images/icon-sun.svg';
 import moon from '../../images/icon-moon.svg';
 import { data } from '../..//DummyData/commentsData';
@@ -14,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const TopBar = ({ setOpenLoginModal, setOpenNotifications }) => {
+export const TopBar = ({ openLeftBar, setOpenLeftBar, setOpenLoginModal, setOpenNotifications }) => {
 	const [openSearch, setOpenSearch] = useState(false);
 	const { light, dark, theme, themeDispatch } = useContext(Context);
 	const classes = useStyles();
@@ -24,18 +29,30 @@ export const TopBar = ({ setOpenLoginModal, setOpenNotifications }) => {
 
 	return (
 		<AppBar
-			style={{ backgroundColor: theme.primary }}
+			style={{
+				backgroundColor: theme.primary,
+				justifyContent:
+					screenWidth < mobileScreen && openSearch
+						? 'center'
+						: 'flex-start',
+			}}
 			className='topBar'
 			position='fixed'>
+			<div
+				style={{
+					display:
+						screenWidth < mobileScreen && openSearch
+							? 'none'
+							: 'flex',
+				}}
+				className='topbar-first-container'>
 				<Menu
-					// style={{
-					// 	transform: open ? 'rotateX(90deg)' : 'rotateX(0deg)',
-					// }}
-					// onClick={() => {
-					// 	setOpen(true);
-					// }}
-					// className='menu-icon'
+					onClick={() => {
+						setOpenLeftBar(!openLeftBar);
+					}}
+					className='menu-icon'
 				/>
+			</div>
 			<div
 				style={{
 					justifyContent:

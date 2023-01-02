@@ -1,4 +1,4 @@
-import { Avatar, Container } from "@material-ui/core";
+import { Avatar } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
 import { useContext, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
@@ -26,6 +26,9 @@ function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [openSignUpModal, setOpenSignUpModal] = useState(false);
   const [openNotifications, setOpenNotifications] = useState(false);
+  const [openLeftBar, setOpenLeftBar] = useState(false);
+  const mobileScreen = 550;
+	let screenWidth = window.screen.availWidth;
 
   return (
     <main
@@ -36,7 +39,7 @@ function App() {
       <ScrollToTop />
 
       <div id='top' className='top-container'>
-        <TopBar setOpenNotifications={setOpenNotifications} setOpenLoginModal={setOpenLoginModal} />
+        <TopBar openLeftBar={openLeftBar} setOpenLeftBar={setOpenLeftBar} setOpenNotifications={setOpenNotifications} setOpenLoginModal={setOpenLoginModal} />
       </div>
 
       <LoginModal
@@ -51,21 +54,18 @@ function App() {
         setOpenLoginModal={setOpenLoginModal}
       />
 
-      <Notifications 
-      openNotifications={openNotifications}
-      setOpenNotifications={setOpenNotifications}
+      <Notifications
+        openNotifications={openNotifications}
+        setOpenNotifications={setOpenNotifications}
       />
 
       <div className='app-body'>
 
-        <Container
-          style={{ backgroundColor: theme.bg }}
-          className='left-container'
-        >
-          <LeftBar />
-        </Container>
+        <LeftBar open={openLeftBar} setOpen={setOpenLeftBar} />
 
-        <div className='right-body-container'>
+        <div className='right-body-container' style={{
+          width: screenWidth < mobileScreen ? '100%' : '95%'
+        }}>
           <div className='body-container'>
             <Routes>
               {/* home */}

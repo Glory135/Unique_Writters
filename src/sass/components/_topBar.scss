@@ -1,5 +1,5 @@
 & .topBar {
-	@include position(center, center);
+	@include position(center, flex-start);
 	width: 100%;
 	height: 10vh;
 	position: fixed;
@@ -7,12 +7,32 @@
 	// @include sm {
 	//   height: 15vh;
 	// }
+
+	& .topbar-first-container {
+		@include position;
+		width: 5%;
+		height: 100%;
+		@include sm {
+			width: 12%;
+		}
+		&:hover {
+			border: 2px solid rgba(255, 255, 255, 0.371);
+		}
+		& .menu-icon {
+			cursor: pointer;
+			font-size: 30px;
+			@include sm {
+				font-size: 20px;
+			}
+		}
+	}
+
 	& .topBar-container {
 		@include position(center, space-between);
 		width: 90%;
 		height: 100%;
 		@include sm {
-			width: 96%;
+			width: 88%;
 		}
 		& .logo {
 			font-size: x-large;
@@ -27,19 +47,20 @@
 				}
 			}
 		}
+
 		& .topbar-second-container {
 			@include position(center, space-evenly);
-      width: 40%;
+			width: 40%;
 
-      @include sm{
-        width: stretch;
-      }
+			@include sm {
+				width: stretch;
+			}
 
 			& .search-container {
 				@include position(center, center);
 				padding: 7px 10px;
 				border-radius: 30px;
-        
+
 				@include sm {
 					padding: 5px 10px;
 				}
@@ -74,7 +95,6 @@
 					cursor: pointer;
 				}
 
-
 				& .ball {
 					position: absolute;
 					height: 99%;
@@ -82,9 +102,9 @@
 					width: 50%;
 					border-radius: 50%;
 
-          &:hover{
-            transform: scale(1.1);
-          }
+					&:hover {
+						transform: scale(1.1);
+					}
 				}
 				& .theme-container {
 					width: 50%;
@@ -94,7 +114,7 @@
 					& img {
 						width: 90%;
 						height: 90%;
-            border-radius: 50%
+						border-radius: 50%;
 					}
 				}
 			}
