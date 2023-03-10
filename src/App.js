@@ -1,7 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
 import { useContext, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { LeftBar } from "./Components/LeftBar/LeftBar";
 import Notifications from "./Components/Notifications/Notifications";
@@ -30,6 +30,7 @@ function App() {
   const [openLeftBar, setOpenLeftBar] = useState(false);
   const mobileScreen = 550;
   let screenWidth = window.screen.availWidth;
+  const {pathname } = useLocation()
 
   return (
     <main
@@ -101,7 +102,7 @@ function App() {
         </div>
       </div>
       {" "}
-      <Link to='/post' className='Link'>
+      <Link style={{display: pathname === '/post' && 'none'}} to='/post' className='Link'>
         <Avatar
           title='Write'
           style={{ backgroundColor: theme.secondary }}
