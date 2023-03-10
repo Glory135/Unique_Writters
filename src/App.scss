@@ -46,6 +46,7 @@ main.App {
 				padding-top: 15vh;
 				flex-direction: column;
 				width: 88%;
+				padding-top: 7vh;
 			}
 			& .body-container {
 				flex: 2.5;
@@ -83,6 +84,7 @@ main.App {
 					@import './sass/pages/write';
 					@import './sass/pages/singlePostPage';
 					@import './sass/pages/thread';
+					@import './sass/pages/profile';
 				}
 			}
 

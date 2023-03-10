@@ -10,6 +10,7 @@ import { AppBar, Button, makeStyles } from '@material-ui/core';
 import sun from '../../images/icon-sun.svg';
 import moon from '../../images/icon-moon.svg';
 import { data } from '../..//DummyData/commentsData';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	searchIcon: {
@@ -19,7 +20,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const TopBar = ({ openLeftBar, setOpenLeftBar, setOpenLoginModal, setOpenNotifications }) => {
+export const TopBar = ({
+	openLeftBar,
+	setOpenLeftBar,
+	setOpenLoginModal,
+	setOpenNotifications,
+}) => {
 	const [openSearch, setOpenSearch] = useState(false);
 	const { light, dark, theme, themeDispatch } = useContext(Context);
 	const classes = useStyles();
@@ -163,13 +169,14 @@ export const TopBar = ({ openLeftBar, setOpenLeftBar, setOpenLoginModal, setOpen
 						</div>
 					</div>
 
-					<div
+					<Link
+						to='/profile'
 						style={{
 							display: openSearch ? 'none' : 'flex',
 						}}
-						className='top-profile-container'>
+						className='top-profile-container Link'>
 						<img src={user.user.image.png} alt='' />
-					</div>
+					</Link>
 				</div>
 			</div>
 		</AppBar>

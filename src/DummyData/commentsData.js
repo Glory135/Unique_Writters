@@ -2,7 +2,7 @@ export const data = {
   currentUser: {
     user: {
       image: {
-        png: require("./avatars/image-juliusomo.png"),
+        png: require("./avatars/me.JPG"),
       },
       username: "juliusomo",
     },

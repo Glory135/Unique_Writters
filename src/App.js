@@ -16,6 +16,7 @@ import { About } from "./Pages/About/About";
 import WriterApplication from "./Pages/Application/WriterApplication";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
+import Profile from "./Pages/Profile/Profile";
 import { SinglePost } from "./Pages/Singles/SinglePost";
 import { Thread } from "./Pages/Thread/Thread";
 import { Write } from "./Pages/Write/Write";
@@ -28,7 +29,7 @@ function App() {
   const [openNotifications, setOpenNotifications] = useState(false);
   const [openLeftBar, setOpenLeftBar] = useState(false);
   const mobileScreen = 550;
-	let screenWidth = window.screen.availWidth;
+  let screenWidth = window.screen.availWidth;
 
   return (
     <main
@@ -87,6 +88,8 @@ function App() {
               <Route path='/singlePost' element={<SinglePost />} />
               {/*  thread */}
               <Route path='/thread' element={<Thread />} />
+              {/*  profile */}
+              <Route path='/profile' element={<Profile />} />
               {/* 404 */}
               <Route path='*' element={<NotFound />} />
             </Routes>
