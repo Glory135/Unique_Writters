@@ -175,7 +175,7 @@ main.App .topBar .topbar-first-container {
   height: 100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .topBar .topbar-first-container {
     width: 12%;
   }
@@ -190,7 +190,7 @@ main.App .topBar .topbar-first-container .menu-icon {
   font-size: 30px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .topBar .topbar-first-container .menu-icon {
     font-size: 20px;
   }
@@ -214,7 +214,7 @@ main.App .topBar .topBar-container {
   height: 100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .topBar .topBar-container {
     width: 88%;
   }
@@ -255,7 +255,7 @@ main.App .topBar .topBar-container .topbar-second-container {
   width: 40%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .topBar .topBar-container .topbar-second-container {
     width: -webkit-fill-available;
     width: -moz-available;
@@ -281,7 +281,7 @@ main.App .topBar .topBar-container .topbar-second-container .search-container {
   border-radius: 30px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .topBar .topBar-container .topbar-second-container .search-container {
     padding: 5px 10px;
   }
@@ -435,14 +435,17 @@ main.App .topBar .topBar-container .topbar-second-container .top-notification-co
   font-size: 10px;
 }
 
-main.App .topBar .topBar-container .topbar-second-container .top-profile-container img {
+main.App .topBar .topBar-container .topbar-second-container .top-profile-container .user-img-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-main.App .topBar .topBar-container .topbar-second-container .top-profile-container img:active {
+main.App .topBar .topBar-container .topbar-second-container .top-profile-container .user-img-container:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   -webkit-transition: 0.3s;
@@ -543,7 +546,7 @@ main.App .app-body .left-container .leftBar .left-item .icons {
   font-size: 25px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .left-container .leftBar .left-item .icons {
     font-size: 20px;
   }
@@ -562,7 +565,7 @@ main.App .app-body .right-body-container {
   padding-top: 10vh;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container {
     padding-top: 15vh;
     -webkit-box-orient: vertical;
@@ -588,7 +591,7 @@ main.App .app-body .right-body-container .body-container {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -647,7 +650,7 @@ main.App .app-body .right-body-container .body-container .page .title {
   font-size: 30px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .title {
     font-size: 25px;
   }
@@ -669,7 +672,7 @@ main.App .app-body .right-body-container .body-container .page .filter-container
           flex-direction: row;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .filter-container div {
     font-size: 14px;
   }
@@ -686,7 +689,7 @@ main.App .app-body .right-body-container .body-container .page .filter-container
   outline: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .filter-container select {
     font-size: 14px;
   }
@@ -716,7 +719,7 @@ main.App .app-body .right-body-container .body-container .page .about-item .abou
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .about-item .about-item-head {
     margin: 10px 0;
   }
@@ -743,7 +746,7 @@ main.App .app-body .right-body-container .body-container .page .about-item-desc 
   overflow-x: hidden;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .about-item-desc {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -753,7 +756,7 @@ main.App .app-body .right-body-container .body-container .page .about-item-desc 
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .about-item-desc.write {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -816,7 +819,7 @@ main.App .app-body .right-body-container .body-container .page .about-item-desc 
   margin-bottom: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-head {
     font-size: 20px;
     margin-bottom: 5px;
@@ -827,7 +830,7 @@ main.App .app-body .right-body-container .body-container .page .about-item-desc 
   margin-bottom: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .about-item-desc .about-item-desc-item.text-con .about-item-desc-text-body {
     font-size: 13px;
   }
@@ -974,7 +977,7 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
           animation: fadeLeft 0.5s;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .contact-form-con form label input,
   main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
     width: 70vw;
@@ -989,7 +992,7 @@ main.App .app-body .right-body-container .body-container .page .contact-form-con
           animation: fadeRight 0.5s;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .contact-form-con form label textarea {
     width: 80vw;
   }
@@ -1085,7 +1088,7 @@ main.App .app-body .right-body-container .body-container .page .application-body
   background: transparent;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .application-body form label input,
   main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
     width: 70vw;
@@ -1098,7 +1101,7 @@ main.App .app-body .right-body-container .body-container .page .application-body
   padding: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .application-body form label textarea {
     width: 70vw;
   }
@@ -1159,7 +1162,7 @@ main.App .app-body .right-body-container .body-container .page .writers-body .si
   padding: 0 20px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .writers-body .singleWriter {
     width: 90%;
     height: 25vh;
@@ -1458,7 +1461,7 @@ main.App .app-body .right-body-container .body-container .page .singlePost-body 
   margin-bottom: 20px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1475,7 +1478,7 @@ main.App .app-body .right-body-container .body-container .page .singlePost-body 
   font-size: 11px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .singlePost-body .post-desc-container .post-desc-item {
     margin-bottom: 5px;
   }
@@ -1594,6 +1597,7 @@ main.App .app-body .right-body-container .body-container .page .profile-body {
 main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container {
   width: 100%;
   height: 250px;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -1607,7 +1611,7 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   background-repeat: no-repeat;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profileCoverPic-container {
     height: 70%;
   }
@@ -1624,6 +1628,56 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
 
 main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profileCoverPic-container .change-cover .change-cover-icon {
   cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profilePic-container {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid;
+}
+
+@media (max-width: 700px) {
+  main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profilePic-container {
+    top: 30px;
+    left: calc(50% - 100px);
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profilePic-container .changeProfilePic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.349);
+  width: 100%;
+  height: 50%;
+  border-radius: 14% 86% 49% 51% / 0% 0% 100% 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profilePic-container .changeProfilePic:hover {
+  color: #F50057;
 }
 
 main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profile-username {
@@ -1644,7 +1698,7 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
           flex-direction: row;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profile-username {
     height: 30%;
   }
@@ -1664,11 +1718,11 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: calc(100% - 230px);
+  width: calc(100% - 200px);
   height: 100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .body-container .page .profile-body .profile-top-container .profile-username .profile-username-main {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -1697,27 +1751,65 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   cursor: pointer;
 }
 
-main.App .app-body .right-body-container .body-container .page .profile-body .profilePic-container {
-  position: absolute;
-  top: -150px;
-  left: 20px;
-  width: 200px;
-  height: 200px;
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-stats {
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-stats span {
+  margin: 2.5px 0;
+  font-family: cursive;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-stats .stat-divider {
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  margin: 0 20px;
+  background-color: #F50057;
 }
 
-@media (max-width: 550px) {
-  main.App .app-body .right-body-container .body-container .page .profile-body .profilePic-container {
-    top: -230px;
-    left: calc(50% - 100px);
-  }
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details {
+  margin: 20px 0;
+  width: 100%;
 }
 
-main.App .app-body .right-body-container .body-container .page .profile-body .profilePic-container .changeProfilePic {
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details .profile-details-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(194, 184, 184, 0.315);
+  font-size: large;
+  font-weight: bold;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details .profile-details-header .editAbout {
+  cursor: pointer;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details div.profile-details-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1727,24 +1819,33 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.349);
-  width: 100%;
-  height: 50%;
-  border-radius: 14% 86% 49% 51% / 0% 0% 100% 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: white;
-  font-weight: bold;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+  line-height: 18px;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details div.profile-details-body .collapse {
+  color: #F50057;
+  text-decoration: underline;
   cursor: pointer;
 }
 
-main.App .app-body .right-body-container .body-container .page .profile-body .profilePic-container .changeProfilePic:hover {
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details ul.profile-details-body {
+  width: 100%;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details ul.profile-details-body li {
+  margin: 15px 0;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details ul.profile-details-body li .profile-detail-label {
+  font-size: 18px;
+  font-weight: bold;
   color: #F50057;
+  margin: 0 20px;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -1843,7 +1944,7 @@ main.App .app-body .right-body-container .right-container .rightBar .writer-list
   width: 80%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .app-body .right-body-container .right-container .rightBar .writer-list-container .writerList .singleListItem .details-con {
     width: 80%;
   }
@@ -2018,7 +2119,7 @@ main.App .paginate-btn-container .paginationBtn li {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .paginate-btn-container .paginationBtn li {
     font-weight: lighter;
   }
@@ -2048,7 +2149,7 @@ main.App .post {
   margin-bottom: 100px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .post {
     width: 90%;
   }
@@ -2068,7 +2169,7 @@ main.App .post .post-action-container .post-media {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .post .post-action-container .post-media {
     height: 150px;
   }
@@ -2102,7 +2203,7 @@ main.App .post .post-action-container .post-details .detail {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .post .post-action-container .post-title {
     font-size: 20px;
   }
@@ -2118,7 +2219,7 @@ main.App .post .post-action-container .post-summary {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .post .post-action-container .post-summary {
     line-height: 17px;
     font-size: 11px;
@@ -2232,6 +2333,15 @@ main.App .comments-container .btn-container {
           flex-direction: row;
 }
 
+main.App .comments-container .user-img-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main.App .reply-container {
   width: 90%;
   border-left: 2px solid grey;
@@ -2279,12 +2389,6 @@ main.App .singleComment-container .singleComment-profile-img-container {
   padding: 5px;
 }
 
-main.App .singleComment-container .singleComment-profile-img-container img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 main.App .singleComment-container .singleComment-main-comment-container {
   width: -webkit-fill-available;
   width: -moz-available;
@@ -2292,7 +2396,7 @@ main.App .singleComment-container .singleComment-main-comment-container {
   margin-left: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .singleComment-container .singleComment-main-comment-container {
     margin: 0;
   }
@@ -2338,7 +2442,7 @@ main.App .singleComment-container .singleComment-main-comment-container .singleC
   margin-right: 5px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-details > div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2385,7 +2489,7 @@ main.App .writeComment-container {
   display: flex;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main.App .writeComment-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2396,10 +2500,6 @@ main.App .writeComment-container {
 
 main.App .writeComment-container .user-details-container {
   padding: 5px;
-}
-
-main.App .writeComment-container .user-details-container img {
-  width: 50px;
 }
 
 main.App .writeComment-container .write-container {
@@ -2477,7 +2577,7 @@ main.App .add-circle-btn:active {
   border-radius: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .notifications-body-container .singleNotification {
     width: 100%;
   }

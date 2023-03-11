@@ -6,6 +6,7 @@
 	& .profile-top-container {
 		width: 100%;
 		height: 250px;
+		margin-bottom: 10px;
 		position: relative;
 
 		& .profileCoverPic-container {
@@ -16,9 +17,9 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-            @include sm{
-                height: 70%;
-            }
+			@include sm {
+				height: 70%;
+			}
 
 			& .change-cover {
 				padding: 5px;
@@ -33,23 +34,58 @@
 			}
 		}
 
+		& .profilePic-container {
+			position: absolute;
+			top: 50px;
+			left: 20px;
+			width: 204px;
+			height: 204px;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border: 4px solid;
+			// position: relative;
+			@include sm {
+				top: 30px;
+				left: calc(50% - 100px);
+			}
+
+			& .changeProfilePic {
+				@include position();
+				background-color: rgba(0, 0, 0, 0.349);
+				width: 100%;
+				height: 50%;
+				border-radius: 14% 86% 49% 51% / 0% 0% 100% 100%;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				color: white;
+				font-weight: bold;
+				cursor: pointer;
+				&:hover {
+					color: $secondary;
+				}
+			}
+		}
+
 		& .profile-username {
 			height: 20%;
 			width: 100%;
 			@include position(center, flex-end);
-            @include sm{
-                height: 30%;
-            }
+			@include sm {
+				height: 30%;
+			}
 
 			& .profile-username-main {
 				@include position(center, space-between);
-				width: calc(100% - 230px);
+				width: calc(100% - 200px);
 				height: 100%;
 				// border: 1px solid green;
-                @include sm{
-                    align-items: flex-end;
-                    width: 100%;
-                }
+				@include sm {
+					align-items: flex-end;
+					width: 100%;
+				}
 
 				& .profile-username-main-first {
 					& .profile-username-main-fullname {
@@ -76,36 +112,61 @@
 		}
 	}
 
-	& .profilePic-container {
-		position: absolute;
-		top: -150px;
-		left: 20px;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		position: relative;
-		@include sm {
-            top: -230px;
-			left: calc(50% - 100px);
+	& .profile-stats {
+		margin: 0 20px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+		& span {
+			margin: 2.5px 0;
+			font-family: cursive;
 		}
-
-		& .changeProfilePic {
-			@include position();
-			background-color: rgba(0, 0, 0, 0.349);
+		& .stat-divider {
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			margin: 0 20px;
+			background-color: $secondary;
+		}
+	}
+	.profile-details {
+		margin: 20px 0;
+		width: 100%;
+		& .profile-details-header {
+			@include position(center, space-between);
+			padding: 0 20px;
 			width: 100%;
-			height: 50%;
-			border-radius: 14% 86% 49% 51% / 0% 0% 100% 100%;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			color: white;
+			height: 50px;
+			border-radius: 10px 10px 0 0;
+			background-color: rgba(194, 184, 184, 0.315);
+			font-size: large;
 			font-weight: bold;
-			cursor: pointer;
-			&:hover {
+            & .editAbout{
+                cursor: pointer;
+            }
+		}
+		& div.profile-details-body {
+			@include position(center, center, column);
+			padding: 10px 0;
+			line-height: 18px;
+			& .collapse {
 				color: $secondary;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+		& ul.profile-details-body {
+			width: 100%;
+
+			& li {
+				margin: 15px 0;
+				& .profile-detail-label {
+					font-size: 18px;
+					font-weight: bold;
+					color: $secondary;
+					margin: 0 20px;
+				}
 			}
 		}
 	}

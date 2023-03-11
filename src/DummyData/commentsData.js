@@ -4,7 +4,7 @@ export const data = {
       image: {
         png: require("./avatars/me.JPG"),
       },
-      username: "juliusomo",
+      username: "Glory135",
     },
   },
   comments: [
@@ -30,9 +30,9 @@ export const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: require("./avatars/image-juliusomo.png"),
+              png: require("./avatars/me.JPG"),
             },
-            username: "juliusomo",
+            username: "Glory135",
           },
         },
         {
@@ -44,9 +44,9 @@ export const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: require("./avatars/image-juliusomo.png"),
+              png: require("./avatars/me.JPG"),
             },
-            username: "juliusomo",
+            username: "Glory135",
           },
         },
       ],
@@ -87,9 +87,9 @@ export const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: require("./avatars/image-juliusomo.png"),
+              png: require("./avatars/me.JPG"),
             },
-            username: "juliusomo",
+            username: "Glory135",
           },
         },
       ],
@@ -130,9 +130,9 @@ export const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: require("./avatars/image-juliusomo.png"),
+              png: require("./avatars/me.JPG"),
             },
-            username: "juliusomo",
+            username: "Glory135",
           },
         },
         {

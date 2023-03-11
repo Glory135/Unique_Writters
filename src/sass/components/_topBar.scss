@@ -153,7 +153,10 @@
 			}
 
 			& .top-profile-container {
-				& img {
+				& .user-img-container {
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
 					width: 35px;
 					height: 35px;
 					border-radius: 50%;

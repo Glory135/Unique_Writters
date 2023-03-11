@@ -175,7 +175,10 @@ export const TopBar = ({
 							display: openSearch ? 'none' : 'flex',
 						}}
 						className='top-profile-container Link'>
-						<img src={user.user.image.png} alt='' />
+							<div style={{backgroundImage: `url(${user.user.image.png})`}} className="user-img-container">
+
+							</div>
+						{/* <img src={user.user.image.png} alt='' /> */}
 					</Link>
 				</div>
 			</div>
