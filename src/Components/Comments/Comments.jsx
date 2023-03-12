@@ -3,8 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import { data } from '../../DummyData/commentsData';
-import MapReplies from './MapReplies';
-import { SingleComment } from './SingleComment';
+import MapComments from './MapComments';
 import { WriteComment } from './WriteComment';
 
 const Comments = () => {
@@ -21,22 +20,7 @@ const Comments = () => {
 			<div className='comments-write-container'>
 				<WriteComment user={user} replyMode={false} />
 			</div>
-			<div className='comments-body'>
-				{allComments.slice(0, 4).map((singleComment, index) => {
-					return (
-						<div className='comments-main-body-container' key={index}>
-							<SingleComment
-								comment={singleComment}
-								user={user}
-							/>
-							<MapReplies
-								user={user}
-								data={singleComment}
-							/>
-						</div>
-					);
-				})}
-			</div>
+			<MapComments data={allComments} user={user}/>
 			<div className='btn-container'>
 				<Link className='Link' to='/thread'>
 					<Button size='small' color='primary'>
