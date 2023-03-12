@@ -136,6 +136,9 @@ main.App {
 		@include sm{
 			left: 20px;
 		}
+		& .to-top-icon{
+			color: white
+		}
 	}
 }
 @import './sass/components/notifications';

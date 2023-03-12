@@ -1,6 +1,6 @@
 import { Avatar } from "@material-ui/core";
 import { Add, ArrowUpward } from "@material-ui/icons";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { LeftBar } from "./Components/LeftBar/LeftBar";
@@ -29,9 +29,14 @@ function App() {
   const [openSignUpModal, setOpenSignUpModal] = useState(false);
   const [openNotifications, setOpenNotifications] = useState(false);
   const [openLeftBar, setOpenLeftBar] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
   let screenWidth = window.screen.availWidth;
   const { pathname } = useLocation()
-  console.log(window);
+
+  useEffect(()=>{
+    window.addEventListener('scroll', ()=>{setScrollPosition(window.pageYOffset)})
+  },[scrollPosition])
+
   return (
     <main
       style={{ backgroundColor: theme.bg, color: theme.text }}
@@ -104,11 +109,12 @@ function App() {
 
 
       <div
-        // style={{ display: window.scrollTo > 0 ? 'block' : 'none' }}
+        style={{ display: scrollPosition > 100 ? 'flex' : 'none' }} 
         onClick={() => window.scrollTo(0, 0)}
         className="back-to-top-btn"
+        title="Scroll To Top"
       >
-        <ArrowUpward />
+        <ArrowUpward className="to-top-icon"/>
       </div>
 
       {" "}

@@ -2639,6 +2639,10 @@ main.App .back-to-top-btn {
   }
 }
 
+main.App .back-to-top-btn .to-top-icon {
+  color: white;
+}
+
 .notifications-body-container {
   overflow-y: scroll;
   display: -webkit-box;
