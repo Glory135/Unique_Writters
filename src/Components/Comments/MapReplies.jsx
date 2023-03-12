@@ -1,7 +1,6 @@
 import { SingleComment } from './SingleComment';
 
 function MapReplies({ user, data }) {
-	console.log(user);
 	return (
 		<div className='reply-container'>
 			{' '}

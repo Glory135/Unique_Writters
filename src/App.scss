@@ -85,6 +85,7 @@ main.App {
 					@import './sass/pages/singlePostPage';
 					@import './sass/pages/thread';
 					@import './sass/pages/profile';
+					@import './sass/pages/adminPanel';
 				}
 			}
 
@@ -104,15 +105,36 @@ main.App {
 	@import './sass/components/comment/writeComment';
 
 	& .add-circle-btn {
-		width: 75px;
-		height: 75px;
+		width: 60px;
+		height: 60px;
 		position: fixed;
-		bottom: 50px;
-		right: 50px;
+		bottom: 20px;
+		right: 20px;
 		cursor: pointer;
 		z-index: 50;
 		&:active {
 			transform: scale(0.8);
+		}
+		@include sm {
+			bottom: 10px;
+			right: 10px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+	& .back-to-top-btn {
+		@include position;
+		background-color: $secondary;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		position: fixed;
+		bottom: 10px;
+		left: 100px;
+		cursor: pointer;
+		z-index: 50;
+		@include sm{
+			left: 20px;
 		}
 	}
 }

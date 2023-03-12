@@ -1,5 +1,5 @@
 import { Avatar } from "@material-ui/core";
-import { Add } from "@material-ui/icons";
+import { Add, ArrowUpward } from "@material-ui/icons";
 import { useContext, useState } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
@@ -13,6 +13,7 @@ import { TopBar } from "./Components/TopBar/TopBar";
 import { Context } from "./Context/Context";
 import NotFound from "./Pages/404/NotFound";
 import { About } from "./Pages/About/About";
+import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import WriterApplication from "./Pages/Application/WriterApplication";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
@@ -29,16 +30,14 @@ function App() {
   const [openNotifications, setOpenNotifications] = useState(false);
   const [openLeftBar, setOpenLeftBar] = useState(false);
   let screenWidth = window.screen.availWidth;
-  const {pathname } = useLocation()
-
+  const { pathname } = useLocation()
+  console.log(window);
   return (
     <main
       style={{ backgroundColor: theme.bg, color: theme.text }}
       className='App'
     >
-
       <ScrollToTop />
-
       <div id='top' className='top-container'>
         <TopBar openLeftBar={openLeftBar} setOpenLeftBar={setOpenLeftBar} setOpenNotifications={setOpenNotifications} setOpenLoginModal={setOpenLoginModal} />
       </div>
@@ -90,6 +89,8 @@ function App() {
               <Route path='/thread' element={<Thread />} />
               {/*  profile */}
               <Route path='/profile' element={<Profile />} />
+              {/*  admin */}
+              <Route path='/admin' element={<AdminPanel />} />
               {/* 404 */}
               <Route path='*' element={<NotFound />} />
             </Routes>
@@ -100,8 +101,18 @@ function App() {
           </div>
         </div>
       </div>
+
+
+      <div
+        // style={{ display: window.scrollTo > 0 ? 'block' : 'none' }}
+        onClick={() => window.scrollTo(0, 0)}
+        className="back-to-top-btn"
+      >
+        <ArrowUpward />
+      </div>
+
       {" "}
-      <Link style={{display: pathname === '/post' && 'none'}} to='/post' className='Link'>
+      <Link style={{ display: pathname === '/post' && 'none' }} to='/post' className='Link'>
         <Avatar
           title='Write'
           style={{ backgroundColor: theme.secondary }}

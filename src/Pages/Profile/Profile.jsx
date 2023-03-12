@@ -1,4 +1,4 @@
-import { Add, Camera, CameraAlt, EditTwoTone } from '@material-ui/icons';
+import { Add, CameraAlt, EditTwoTone, Security } from '@material-ui/icons';
 import React, { useContext, useState } from 'react';
 import BreadCrumbs from '../../Components/BreadCrumbs/BreadCrumbs';
 import { Context } from '../../Context/Context';
@@ -25,13 +25,26 @@ const Profile = () => {
 				/>
 			</div>
 			<div className='profile-body'>
+				<div className='profile-admin-login'>
+					<Link className='Link' to='/admin'>
+						<Button
+							size='large'
+							variant='contained'
+							color='secondary'>
+							{' '}
+							<Security /> Admin Login
+						</Button>
+					</Link>
+				</div>
 				<div className='profile-top-container'>
 					<div
 						style={{
 							backgroundImage: `url(${require('../../images/cover_pic.png')})`,
 						}}
 						className='profileCoverPic-container'>
-						<span className='change-cover' title='Change Cover Photo'>
+						<span
+							className='change-cover'
+							title='Change Cover Photo'>
 							<EditTwoTone className='change-cover-icon' />
 						</span>
 					</div>
@@ -84,25 +97,25 @@ const Profile = () => {
 					<div className='profile-details-header'>User Details</div>
 					<ul className='profile-details-body'>
 						<li>
-							<spam className='profile-detail-label'>Email:</spam>{' '}
+							<span className='profile-detail-label'>Email:</span>{' '}
 							<span className='profile-detail-text'>
 								adeyemiglr@gmail.com
 							</span>
 						</li>
 						<li>
-							<spam className='profile-detail-label'>
+							<span className='profile-detail-label'>
 								First name:
-							</spam>{' '}
+							</span>{' '}
 							<span className='profile-detail-text'>Glory</span>
 						</li>
 						<li>
-							<spam className='profile-detail-label'>
+							<span className='profile-detail-label'>
 								Last name:
-							</spam>{' '}
+							</span>{' '}
 							<span className='profile-detail-text'>Adeyemi</span>
 						</li>
 						<li>
-							<spam className='profile-detail-label'>Role:</spam>{' '}
+							<span className='profile-detail-label'>Role:</span>{' '}
 							<span className='profile-detail-text'>Writer</span>
 						</li>
 					</ul>
@@ -111,7 +124,10 @@ const Profile = () => {
 				<div className='profile-details'>
 					<div className='profile-details-header'>
 						<div className='profile-details-header-text'>About</div>
-						<EditTwoTone className='profile-details-header-icon' title='Edit Bio'/>
+						<EditTwoTone
+							className='profile-details-header-icon'
+							title='Edit Bio'
+						/>
 					</div>
 					<div className='profile-details-body'>
 						{aboutCollapsed
@@ -127,18 +143,22 @@ const Profile = () => {
 
 				<div className='profile-details'>
 					<div className='profile-details-header'>
-					<div className='profile-details-header-text'>Recent Posts</div>
-					<Link to='/post' className='Link' title='Post Story'>
-						<Add className='profile-details-header-icon'  />
-					</Link>
+						<div className='profile-details-header-text'>
+							Recent Posts
+						</div>
+						<Link to='/post' className='Link' title='Post Story'>
+							<Add className='profile-details-header-icon' />
+						</Link>
 					</div>
 					<div className='profile-details-body posts'>
-						{DummyData.slice(0, 2).map((singlePost) => {
-							return <Post data={singlePost} ratio={2}/>;
+						{DummyData.slice(0, 2).map((singlePost, index) => {
+							return (
+								<Post key={index} data={singlePost} ratio={2} />
+							);
 						})}
 					</div>
 					<div className='profile-details-footer'>
-						<Button size='small' color='secondary' >
+						<Button size='small' color='secondary'>
 							See All Posts
 						</Button>
 					</div>

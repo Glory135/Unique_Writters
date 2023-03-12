@@ -9,6 +9,7 @@ import {
 	Add,
 	ContactSupport,
 	ExitToApp,
+	Security,
 } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core';
 import { Link, useLocation } from 'react-router-dom';
@@ -106,6 +107,15 @@ export const LeftBar = ({ open }) => {
 					{' '}
 					<Add className={classes.icon && 'icons'} />{' '}
 					<span style={styles.name}>Write </span>
+				</Link>
+
+				<Link
+					style={styles.leftItem('admin')}
+					className='left-item Link'
+					to='/admin'>
+					{' '}
+					<Security className={classes.icon && 'icons'} />{' '}
+					<span style={styles.name}>Admin Login </span>
 				</Link>
 
 				<div className='left-item' to='/'>
