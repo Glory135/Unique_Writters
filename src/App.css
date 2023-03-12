@@ -2329,6 +2329,10 @@ main.App .comments-container .comments-write-container {
 }
 
 main.App .comments-container .comments-body {
+  width: 97%;
+}
+
+main.App .comments-container .comments-body .comments-main-body-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2342,7 +2346,7 @@ main.App .comments-container .comments-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
+  width: 100%;
 }
 
 main.App .comments-container .btn-container {
@@ -2373,7 +2377,20 @@ main.App .comments-container .user-img-container {
 }
 
 main.App .reply-container {
-  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 97%;
   border-left: 1px solid rgba(110, 110, 110, 0.705);
 }
 
@@ -2381,9 +2398,9 @@ main.App .reply-container .reply-main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

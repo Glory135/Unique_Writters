@@ -62,6 +62,70 @@ export const data = {
                 },
                 username: "Glory135",
               },
+              replies: [
+                {
+                  id: 6,
+                  content:
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eaque ratione laudantium doloribus corrupti praesentium, corporis Aliquid soluta ex in praesentium qui, reprehenderit laborum nisi quisquam? Debitis maxime beatae sint excepturi magnam est, doloremque aspernatur quis quasi voluptates non tenetur a",
+                  createdAt: "2 days ago",
+                  score: 2,
+                  replyingTo: "Glory135",
+                  user: {
+                    image: {
+                      png: require("./avatars/me.JPG"),
+                    },
+                    username: "Glory135",
+                  },
+                  replies: [
+                    {
+                      id: 6,
+                      content:
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eaque ratione laudantium doloribus corrupti praesentium, corporis Aliquid soluta ex in praesentium qui, reprehenderit laborum nisi quisquam? Debitis maxime beatae sint excepturi magnam est, doloremque aspernatur quis quasi voluptates non tenetur a",
+                      createdAt: "2 days ago",
+                      score: 2,
+                      replyingTo: "Glory135",
+                      user: {
+                        image: {
+                          png: require("./avatars/me.JPG"),
+                        },
+                        username: "Glory135",
+                      },
+                      replies: [
+                        {
+                          id: 6,
+                          content:
+                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eaque ratione laudantium doloribus corrupti praesentium, corporis Aliquid soluta ex in praesentium qui, reprehenderit laborum nisi quisquam? Debitis maxime beatae sint excepturi magnam est, doloremque aspernatur quis quasi voluptates non tenetur a",
+                          createdAt: "2 days ago",
+                          score: 2,
+                          replyingTo: "Glory135",
+                          user: {
+                            image: {
+                              png: require("./avatars/me.JPG"),
+                            },
+                            username: "Glory135",
+                          },
+                          replies: [
+                            {
+                              id: 6,
+                              content:
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eaque ratione laudantium doloribus corrupti praesentium, corporis Aliquid soluta ex in praesentium qui, reprehenderit laborum nisi quisquam? Debitis maxime beatae sint excepturi magnam est, doloremque aspernatur quis quasi voluptates non tenetur a",
+                              createdAt: "2 days ago",
+                              score: 2,
+                              replyingTo: "Glory135",
+                              user: {
+                                image: {
+                                  png: require("./avatars/me.JPG"),
+                                },
+                                username: "Glory135",
+                              },
+                            },
+                          ]
+                        },
+                      ]
+                    },
+                  ]
+                },
+              ]
             },
           ]
         },

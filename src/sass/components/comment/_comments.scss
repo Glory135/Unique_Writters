@@ -22,8 +22,11 @@
 		width: 100%;
 	}
 	& .comments-body {
-		@include position(flex-end, center, column);
-		width: 95%;
+		width: 97%;
+    & .comments-main-body-container{
+      @include position(flex-end, center, column);
+      width: 100%;
+    }
 	}
 	& .btn-container {
 		margin-top: 20px;
@@ -40,10 +43,11 @@
 	}
 }
 & .reply-container {
-	width: 95%;
+  @include position(flex-end, center, column);
+	width: 97%;
 	border-left: 1px solid rgba(110, 110, 110, 0.705);
 	& .reply-main-container {
-		@include position(center, center, column);
+		@include position(flex-end, center, column);
 		width: 100%;
 	}
 }

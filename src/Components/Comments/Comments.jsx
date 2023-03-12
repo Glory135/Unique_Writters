@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import { data } from '../../DummyData/commentsData';
+import MapReplies from './MapReplies';
 import { SingleComment } from './SingleComment';
 import { WriteComment } from './WriteComment';
 
@@ -23,28 +24,16 @@ const Comments = () => {
 			<div className='comments-body'>
 				{allComments.slice(0, 4).map((singleComment, index) => {
 					return (
-						<>
+						<div className='comments-main-body-container' key={index}>
 							<SingleComment
-								key={index}
 								comment={singleComment}
 								user={user}
 							/>
-							<div className='reply-container'>
-								{singleComment.replies
-									.slice(0, 2)
-									.map((singleReply, index2) => {
-										return (
-											<div className='reply-main-container'>
-												<SingleComment
-													key={index2}
-													comment={singleReply}
-													user={user}
-												/>
-											</div>
-										);
-									})}
-							</div>
-						</>
+							<MapReplies
+								user={user}
+								data={singleComment}
+							/>
+						</div>
 					);
 				})}
 			</div>
