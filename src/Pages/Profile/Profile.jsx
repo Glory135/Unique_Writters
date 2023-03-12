@@ -1,4 +1,4 @@
-import { Add, EditTwoTone } from '@material-ui/icons';
+import { Add, Camera, CameraAlt, EditTwoTone } from '@material-ui/icons';
 import React, { useContext, useState } from 'react';
 import BreadCrumbs from '../../Components/BreadCrumbs/BreadCrumbs';
 import { Context } from '../../Context/Context';
@@ -31,7 +31,7 @@ const Profile = () => {
 							backgroundImage: `url(${require('../../images/cover_pic.png')})`,
 						}}
 						className='profileCoverPic-container'>
-						<span className='change-cover'>
+						<span className='change-cover' title='Change Cover Photo'>
 							<EditTwoTone className='change-cover-icon' />
 						</span>
 					</div>
@@ -42,7 +42,9 @@ const Profile = () => {
 							borderColor: theme.bg,
 						}}
 						className='profilePic-container'>
-						<div className='changeProfilePic'>Change</div>
+						<div className='changeProfilePic'>
+							<CameraAlt />
+						</div>
 					</div>
 
 					<div className='profile-username'>
@@ -109,7 +111,7 @@ const Profile = () => {
 				<div className='profile-details'>
 					<div className='profile-details-header'>
 						<div className='profile-details-header-text'>About</div>
-						<EditTwoTone className='profile-details-header-icon' />
+						<EditTwoTone className='profile-details-header-icon' title='Edit Bio'/>
 					</div>
 					<div className='profile-details-body'>
 						{aboutCollapsed

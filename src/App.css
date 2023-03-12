@@ -1666,7 +1666,7 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
           flex-direction: row;
   background-color: rgba(0, 0, 0, 0.349);
   width: 100%;
-  height: 50%;
+  height: 40%;
   border-radius: 14% 86% 49% 51% / 0% 0% 100% 100%;
   position: absolute;
   left: 0;
@@ -2278,14 +2278,27 @@ main.App .breadCrumb-container .breadCrumbs-item:hover {
 }
 
 main.App .comments-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgray;
 }
 
 main.App .comments-container .comments-head {
-  padding: 0 5%;
-  width: 1000%;
+  padding: 0 2%;
+  width: 100%;
   height: 10vh;
   font-size: 30px;
   font-weight: bold;
@@ -2319,9 +2332,9 @@ main.App .comments-container .comments-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2329,7 +2342,7 @@ main.App .comments-container .comments-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 95%;
 }
 
 main.App .comments-container .btn-container {
@@ -2360,17 +2373,17 @@ main.App .comments-container .user-img-container {
 }
 
 main.App .reply-container {
-  width: 90%;
-  border-left: 2px solid grey;
+  width: 95%;
+  border-left: 1px solid rgba(110, 110, 110, 0.705);
 }
 
 main.App .reply-container .reply-main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2379,20 +2392,10 @@ main.App .reply-container .reply-main-container {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  position: relative;
-}
-
-main.App .reply-container .reply-main-container .thread-line {
-  width: 100%;
-  height: 50px;
-  border-radius: 15px;
-  border-bottom: 3px solid grey;
-  position: absolute;
-  z-index: 1;
 }
 
 main.App .singleComment-container {
-  width: 95%;
+  width: 100%;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
@@ -2471,7 +2474,12 @@ main.App .singleComment-container .singleComment-main-comment-container .singleC
   }
 }
 
+main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-body {
+  font-size: 13px;
+}
+
 main.App .singleComment-container .singleComment-main-comment-container .singleComment-main-comment-body span {
+  font-size: 13px;
   font-weight: bold;
   margin-right: 5px;
   color: #f50057;
@@ -2517,6 +2525,10 @@ main.App .writeComment-container {
 
 main.App .writeComment-container .user-details-container {
   padding: 5px;
+}
+
+main.App .writeComment-container .user-details-container .user-img-container {
+  margin-right: 5px;
 }
 
 main.App .writeComment-container .write-container {

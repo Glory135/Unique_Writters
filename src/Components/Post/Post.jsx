@@ -12,13 +12,18 @@ import { Link } from 'react-router-dom';
 
 export const Post = ({ data, ratio }) => {
 	const { theme, mobile } = useContext(Context);
-  let screenWidth = window.screen.availWidth;
+	let screenWidth = window.screen.availWidth;
 
 	const cardBodyText =
 		'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus  laboriosam sed laborum impedit error ullam quod voluptate, suscipit illum. Quae repellendus explicabo numquam accusantium iure sit soluta et reiciendis eaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus laboriosam sed laborum impedit error ullam quod voluptate, suscipit illum. Quae repellendus explicabo numquam accusantium iure sit soluta et reiciendis eaque Lorem ipsum dolor sit amet consectetur, adipisicing eli Minima nihil aspernatur consectetur sunt voluptatem eius. Rerum natus sint eaque nesciunt facere libero quae! Su labore voluptatibus at sit voluptate atque doloribus amet. Quod accusamus suscipit aliquam placeat, perspiciat quam magnam incidunt? Sit tempore molestias, quam excepturi optio saepe eius atque.';
 
-    return (
-		<Card style={{ width:screenWidth < mobile ? '90%' : `calc(95% / ${ratio})`, marginBottom: ratio > 1 && '10px' }} className='post'>
+	return (
+		<Card
+			style={{
+				width: screenWidth < mobile ? '90%' : `calc(95% / ${ratio})`,
+				marginBottom: ratio > 1 && '1y0px',
+			}}
+			className='post'>
 			<Link to='/singlePost' className='Link post-action-container'>
 				<CardMedia className='post-media' image={data} title='post' />
 				<CardContent

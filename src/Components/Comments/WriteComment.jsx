@@ -7,7 +7,7 @@ export const WriteComment = ({ user, replyMode, setReplyMode }) => {
 	return (
 		<div
 			className='writeComment-container'
-			style={{ width: replyMode ? '100%' : '90%' }}>
+			style={{ width: replyMode ? '100%' : '95%' }}>
 			<div className='user-details-container'>
 				<div
 					style={{ backgroundImage: `url(${user.user.image.png})` }}
