@@ -142,12 +142,11 @@
 			background-color: rgba(194, 184, 184, 0.315);
 			font-size: large;
 			font-weight: bold;
-            & .editAbout{
+            & .profile-details-header-icon{
                 cursor: pointer;
             }
 		}
 		& div.profile-details-body {
-			@include position(center, center, column);
 			padding: 10px 0;
 			line-height: 18px;
 			& .collapse {
@@ -168,6 +167,16 @@
 					margin: 0 20px;
 				}
 			}
+		}
+		& div.profile-details-body.posts{
+			@include position(flex-start, center, row);
+			flex-wrap: wrap;
+			gap: calc(10% /3);
+		}
+		& .profile-details-footer{
+			@include position(center, flex-end);
+			width: 100%;
+			padding-right: 20px;
 		}
 	}
 }

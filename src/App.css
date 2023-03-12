@@ -1805,24 +1805,11 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   font-weight: bold;
 }
 
-main.App .app-body .right-body-container .body-container .page .profile-body .profile-details .profile-details-header .editAbout {
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details .profile-details-header .profile-details-header-icon {
   cursor: pointer;
 }
 
 main.App .app-body .right-body-container .body-container .page .profile-body .profile-details div.profile-details-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 10px 0;
   line-height: 18px;
 }
@@ -1846,6 +1833,43 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   font-weight: bold;
   color: #F50057;
   margin: 0 20px;
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details div.profile-details-body.posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: calc(10% /3);
+}
+
+main.App .app-body .right-body-container .body-container .page .profile-body .profile-details .profile-details-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding-right: 20px;
 }
 
 main.App .app-body .right-body-container .right-container {
@@ -2144,15 +2168,8 @@ main.App .paginationActive a {
 }
 
 main.App .post {
-  width: 80%;
   margin: 0;
-  margin-bottom: 100px;
-}
-
-@media (max-width: 700px) {
-  main.App .post {
-    width: 90%;
-  }
+  margin-bottom: 50px;
 }
 
 main.App .post .post-action-container {

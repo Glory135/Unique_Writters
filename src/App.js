@@ -23,12 +23,11 @@ import { Write } from "./Pages/Write/Write";
 import AllWriters from "./Pages/Writers/AllWriters";
 
 function App() {
-  const { theme } = useContext(Context);
+  const { theme, mobile } = useContext(Context);
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [openSignUpModal, setOpenSignUpModal] = useState(false);
   const [openNotifications, setOpenNotifications] = useState(false);
   const [openLeftBar, setOpenLeftBar] = useState(false);
-  const mobileScreen = 550;
   let screenWidth = window.screen.availWidth;
   const {pathname } = useLocation()
 
@@ -66,7 +65,7 @@ function App() {
         <LeftBar open={openLeftBar} setOpen={setOpenLeftBar} />
 
         <div className='right-body-container' style={{
-          width: screenWidth < mobileScreen ? '100%' : '95%'
+          width: screenWidth < mobile ? '100%' : '95%'
         }}>
           <div className='body-container'>
             <Routes>

@@ -1,15 +1,16 @@
-import { EditTwoTone } from '@material-ui/icons';
+import { Add, EditTwoTone } from '@material-ui/icons';
 import React, { useContext, useState } from 'react';
 import BreadCrumbs from '../../Components/BreadCrumbs/BreadCrumbs';
 import { Context } from '../../Context/Context';
 import { data } from '../../DummyData/commentsData';
-import {data as DummyData} from '../../Data/data';
+import { data as DummyData } from '../../Data/data';
 import { Post } from '../../Components/Post/Post';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
 	const [aboutCollapsed, setAboutCollapsed] = useState(false);
 	const { theme, dark } = useContext(Context);
-	console.log(dark);
 	const user = data.currentUser;
 	const about =
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum nesciunt reprehenderit similique qui molestias illum facilis modi rem animi nulla cum obcaecati explicabo mollitia repellat in, distinctio, eum deleniti? Incidunt expedita vel adipisci natus quidem recusandae laudantium, dolorum in nostrum illum! Voluptate qui quidem architecto earum nulla magni assumenda. Tempora quo sunt expedita, cupiditate porro illum obcaecati, repellat maxime ipsa dicta aliquid vero similique? Deserunt exercitationem, provident atque sunt saepe totam perferendis reiciendis tempora rerum? Aspernatur eos a vitae quisquam doloremque accusamus placeat explicabo, commodi soluta nam consectetur nesciunt dicta blanditiis harum tempore error quo! Maiores illum quos voluptatibus.';
@@ -108,7 +109,7 @@ const Profile = () => {
 				<div className='profile-details'>
 					<div className='profile-details-header'>
 						<div className='profile-details-header-text'>About</div>
-						<EditTwoTone className='editAbout' />
+						<EditTwoTone className='profile-details-header-icon' />
 					</div>
 					<div className='profile-details-body'>
 						{aboutCollapsed
@@ -123,13 +124,21 @@ const Profile = () => {
 				</div>
 
 				<div className='profile-details'>
-					<div className='profile-details-header'>Posts</div>
-					<div className='profile-details-body'>
-						{
-							DummyData.slice(0, 3).map((singlePost)=>{
-								return <Post data={singlePost} />
-							})
-						}
+					<div className='profile-details-header'>
+					<div className='profile-details-header-text'>Recent Posts</div>
+					<Link to='/post' className='Link' title='Post Story'>
+						<Add className='profile-details-header-icon'  />
+					</Link>
+					</div>
+					<div className='profile-details-body posts'>
+						{DummyData.slice(0, 2).map((singlePost) => {
+							return <Post data={singlePost} ratio={2}/>;
+						})}
+					</div>
+					<div className='profile-details-footer'>
+						<Button size='small' color='secondary' >
+							See All Posts
+						</Button>
 					</div>
 				</div>
 			</div>
