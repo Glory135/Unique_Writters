@@ -33,9 +33,9 @@ function App() {
   let screenWidth = window.screen.availWidth;
   const { pathname } = useLocation()
 
-  useEffect(()=>{
-    window.addEventListener('scroll', ()=>{setScrollPosition(window.pageYOffset)})
-  },[scrollPosition])
+  useEffect(() => {
+    window.addEventListener('scroll', () => { setScrollPosition(window.pageYOffset) })
+  }, [scrollPosition])
 
   return (
     <main
@@ -109,12 +109,19 @@ function App() {
 
 
       <div
-        style={{ display: scrollPosition > 100 ? 'flex' : 'none' }} 
+        style={{
+          transform:
+            scrollPosition > 100
+              ?
+              'scale(1) translateY(0%)'
+              :
+              'scale(0) translateY(200%)'
+        }}
         onClick={() => window.scrollTo(0, 0)}
         className="back-to-top-btn"
         title="Scroll To Top"
       >
-        <ArrowUpward className="to-top-icon"/>
+        <ArrowUpward className="to-top-icon" />
       </div>
 
       {" "}

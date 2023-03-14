@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Context } from '../../Context/Context';
 import { Container } from '@material-ui/core';
 import {
@@ -11,18 +11,10 @@ import {
 	ExitToApp,
 	Security,
 } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/core';
 import { Link, useLocation } from 'react-router-dom';
-
-const useStyles = makeStyles((theme) => ({
-	icon: {
-		// color: (props) => props.color,
-	},
-}));
 
 export const LeftBar = ({ open }) => {
 	const { theme } = useContext(Context);
-	const classes = useStyles({ color: theme.primary });
 	const { pathname } = useLocation();
 	const location = pathname.split('/')[1];
 	const mobileScreen = 550;
@@ -60,7 +52,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/'>
 					{' '}
-					<Home className={classes.icon && 'icons'} />{' '}
+					<Home className='icons' />{' '}
 					<span style={styles.name}>Home</span>{' '}
 				</Link>
 
@@ -69,7 +61,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/about'>
 					{' '}
-					<Info className={classes.icon && 'icons'} />{' '}
+					<Info className='icons' />{' '}
 					<span style={styles.name}>About Us </span>
 				</Link>
 
@@ -78,7 +70,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/contact'>
 					{' '}
-					<ContactSupport className={classes.icon && 'icons'} />
+					<ContactSupport className='icons' />
 					<span style={styles.name}>Contact Us </span>
 				</Link>
 
@@ -87,7 +79,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/writerApplication'>
 					{' '}
-					<PostAdd className={classes.icon && 'icons'} />{' '}
+					<PostAdd className='icons' />{' '}
 					<span style={styles.name}>Apply To Be A Writer </span>
 				</Link>
 
@@ -96,7 +88,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/writers'>
 					{' '}
-					<Contacts className={classes.icon && 'icons'} />{' '}
+					<Contacts className='icons' />{' '}
 					<span style={styles.name}>Writers </span>
 				</Link>
 
@@ -105,7 +97,7 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/post'>
 					{' '}
-					<Add className={classes.icon && 'icons'} />{' '}
+					<Add className='icons' />{' '}
 					<span style={styles.name}>Write </span>
 				</Link>
 
@@ -114,12 +106,12 @@ export const LeftBar = ({ open }) => {
 					className='left-item Link'
 					to='/admin'>
 					{' '}
-					<Security className={classes.icon && 'icons'} />{' '}
+					<Security className='icons' />{' '}
 					<span style={styles.name}>Admin Login </span>
 				</Link>
 
 				<div className='left-item' to='/'>
-					<ExitToApp className={classes.icon && 'icons'} />{' '}
+					<ExitToApp className='icons' />{' '}
 					<span style={styles.name}>LogOut </span>
 				</div>
 			</div>
