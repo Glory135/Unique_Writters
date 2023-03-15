@@ -34,9 +34,12 @@ export const Post = ({ data, ratio }) => {
 					<div
 						style={{ color: theme.secondary }}
 						className='post-details'>
-						<div className='author detail'>
-							Author: Bolaji Blessing
-						</div>
+						<Link to='/profile' className='Link'>
+							<div className='author detail'>
+								Author: Bolaji Blessing
+							</div>
+						</Link>
+
 						<div className='time detail'>1st May 2020</div>
 					</div>
 					<Typography
