@@ -1,9 +1,8 @@
 import { Button } from '@material-ui/core';
-import React, { useContext } from 'react';
-import { Context } from '../../Context/Context';
+import { useSelector } from 'react-redux';
 
 export const WriteComment = ({ user, replyMode, setReplyMode }) => {
-	const { theme } = useContext(Context);
+	const { theme } = useSelector(state=>state.theme);
 	return (
 		<div
 			className='writeComment-container'

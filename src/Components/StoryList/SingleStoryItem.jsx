@@ -1,9 +1,8 @@
 import { CommentOutlined, ThumbUpOutlined } from "@material-ui/icons";
-import React, { useContext } from "react";
-import { Context } from "../../Context/Context";
+import { useSelector } from "react-redux";
 
 export const SingleStoryItem = ({ item }) => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div className='singleStoryItem'>
       <img src={item} alt='' />

@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
 import { SingleStoryItem } from "./SingleStoryItem";
 import { data } from "../../Data/data";
-import { Context } from "../../Context/Context";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const StoryList = () => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div className='storyList'>
       <div className='right-head'>

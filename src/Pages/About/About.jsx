@@ -1,14 +1,13 @@
 import { Button } from "@material-ui/core";
 import { InfoOutlined } from "@material-ui/icons";
-import React, { useContext } from "react";
+import { useSelector } from "react-redux";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";
-import { Context } from "../../Context/Context";
 import img1 from "../../images/authors/author1.jpg";
 import img2 from "../../images/authors/author2.jpg";
 import img3 from "../../images/authors/author3.jpg";
 
 export const About = () => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div className='page'>
       <div className='breadCrumb-container'>

@@ -1,16 +1,16 @@
 import { Add, CameraAlt, EditTwoTone, Security } from '@material-ui/icons';
-import React, { useContext, useState } from 'react';
+import React, {  useState } from 'react';
 import BreadCrumbs from '../../Components/BreadCrumbs/BreadCrumbs';
-import { Context } from '../../Context/Context';
 import { data } from '../../DummyData/commentsData';
 import { data as DummyData } from '../../Data/data';
 import { Post } from '../../Components/Post/Post';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const Profile = () => {
+const Profile = ({ setOpenAdminLoginModal }) => {
 	const [aboutCollapsed, setAboutCollapsed] = useState(false);
-	const { theme, dark } = useContext(Context);
+	const { theme, dark } = useSelector(state=>state.theme);
 	const user = data.currentUser;
 	const about =
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum nesciunt reprehenderit similique qui molestias illum facilis modi rem animi nulla cum obcaecati explicabo mollitia repellat in, distinctio, eum deleniti? Incidunt expedita vel adipisci natus quidem recusandae laudantium, dolorum in nostrum illum! Voluptate qui quidem architecto earum nulla magni assumenda. Tempora quo sunt expedita, cupiditate porro illum obcaecati, repellat maxime ipsa dicta aliquid vero similique? Deserunt exercitationem, provident atque sunt saepe totam perferendis reiciendis tempora rerum? Aspernatur eos a vitae quisquam doloremque accusamus placeat explicabo, commodi soluta nam consectetur nesciunt dicta blanditiis harum tempore error quo! Maiores illum quos voluptatibus.';
@@ -26,15 +26,16 @@ const Profile = () => {
 			</div>
 			<div className='profile-body'>
 				<div className='profile-admin-login'>
-					<Link className='Link' to='/admin'>
-						<Button
-							size='large'
-							variant='contained'
-							color='secondary'>
-							{' '}
-							<Security /> Admin Login
-						</Button>
-					</Link>
+					<Button
+						size='large'
+						variant='contained'
+						color='secondary'
+						onClick={() => {
+							setOpenAdminLoginModal(true);
+						}}>
+						{' '}
+						<Security /> Admin Login
+					</Button>
 				</div>
 				<div className='profile-top-container'>
 					<div

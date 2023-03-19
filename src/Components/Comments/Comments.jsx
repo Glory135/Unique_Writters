@@ -1,13 +1,12 @@
 import { Button } from '@material-ui/core';
-import React, { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Context } from '../../Context/Context';
 import { data } from '../../DummyData/commentsData';
 import MapComments from './MapComments';
 import { WriteComment } from './WriteComment';
 
 const Comments = () => {
-	const { theme } = useContext(Context);
+	const { theme } = useSelector(state=>state.theme);
 	const allComments = data.comments;
 	const user = data.currentUser;
 

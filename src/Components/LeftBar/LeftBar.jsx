@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import { Context } from '../../Context/Context';
 import { Container } from '@material-ui/core';
 import {
 	Home,
@@ -12,9 +10,10 @@ import {
 	Security,
 } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const LeftBar = ({ open }) => {
-	const { theme } = useContext(Context);
+	const { theme } = useSelector((state) => state.theme);
 	const { pathname } = useLocation();
 	const location = pathname.split('/')[1];
 	const mobileScreen = 550;

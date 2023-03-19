@@ -1,8 +1,7 @@
 import { Button, Container, makeStyles, Modal } from "@material-ui/core";
-import React, { useContext } from "react";
-import { Context } from "../../Context/Context";
 import { CancelOutlined } from "@material-ui/icons";
 import { modalStyle } from "../modalStyles";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => modalStyle(theme));
 
@@ -11,7 +10,7 @@ const LoginModal = ({
   setOpenLoginModal,
   setOpenSignUpModal,
 }) => {
-  const { light, theme, dark } = useContext(Context);
+  const { light, theme, dark } = useSelector(state=>state.theme);
   const classes = useStyles();
 
   return (

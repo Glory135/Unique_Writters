@@ -6,12 +6,11 @@ import {
   Pinterest,
   Twitter,
 } from "@material-ui/icons";
-import React, { useContext } from "react";
+import { useSelector } from "react-redux";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";
-import { Context } from "../../Context/Context";
 
 const Contact = () => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div className='page'>
       <div className='breadCrumb-container'>

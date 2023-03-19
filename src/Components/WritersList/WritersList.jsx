@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
 import { SingleListItem } from './SingleListItem';
 import { writers } from '../../Data/data';
 import { Button } from '@material-ui/core';
-import { Context } from '../../Context/Context';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const WritersList = () => {
-	const { theme } = useContext(Context);
+	const { theme } = useSelector(state=>state.theme);
 	return (
 		<div className='writerList'>
 			<div className='right-head'>

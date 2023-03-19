@@ -1872,6 +1872,137 @@ main.App .app-body .right-body-container .body-container .page .profile-body .pr
   padding-right: 20px;
 }
 
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body {
+  width: 100%;
+  margin: 20px 0;
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-head h3 {
+  font-size: larger;
+  font-family: cursive;
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  height: auto;
+  width: 100%;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body {
+    padding: 0 10px;
+    gap: 10px;
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  height: 35vh;
+  background-color: rgba(51, 51, 51, 0.123);
+}
+
+@media (max-width: 800px) {
+  main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item {
+    width: 47%;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 700px) {
+  main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item {
+    width: calc(100% - 20px);
+  }
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item .chart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 80%;
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item .chart-container .chart {
+  font-size: 200px;
+}
+
+main.App .app-body .right-body-container .body-container .page .admin-panel-home-body .admin-panel-home-stats-body .admin-panel-home-stats-item .chart-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  height: 20%;
+  font-size: large;
+  font-weight: lighter;
+  border-top: 1px solid #F50057;
+}
+
 main.App .app-body .right-body-container .right-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;

@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { Context } from '../../Context/Context';
+import React, { useState } from 'react';
 import {
 	CancelOutlined,
 	Notifications,
@@ -11,6 +10,8 @@ import sun from '../../images/icon-sun.svg';
 import moon from '../../images/icon-moon.svg';
 import { data } from '../..//DummyData/commentsData';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { darkMode, lightMode } from '../../Context/features/theme/themeSlice';
 
 const useStyles = makeStyles((theme) => ({
 	searchIcon: {
@@ -27,7 +28,8 @@ export const TopBar = ({
 	setOpenNotifications,
 }) => {
 	const [openSearch, setOpenSearch] = useState(false);
-	const { light, dark, theme, themeDispatch } = useContext(Context);
+	const { light, dark, theme } = useSelector(state=>state.theme);
+	const dispatch = useDispatch();
 	const classes = useStyles();
 	const user = data.currentUser;
 	const mobileScreen = 550;
@@ -120,9 +122,9 @@ export const TopBar = ({
 						}}
 						onClick={() => {
 							if (light) {
-								themeDispatch({ type: 'DARK_MODE' });
+								dispatch(darkMode());
 							} else if (dark) {
-								themeDispatch({ type: 'LIGHT_MODE' });
+								dispatch(lightMode())
 							}
 						}}
 						className='top-theme-switcher'>

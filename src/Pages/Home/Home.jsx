@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
 import { Feed } from "../../Components/Feed/Feed";
 import { data } from "../../Data/data";
 import { Sort } from "@material-ui/icons";
-import { Context } from "../../Context/Context";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div className='page'>
       <div className='breadCrumb-container'>

@@ -1,11 +1,10 @@
 import { Button } from "@material-ui/core";
 import { InfoOutlined, Send } from "@material-ui/icons";
-import React, { useContext } from "react";
+import { useSelector } from "react-redux";
 import BreadCrumbs from "../../Components/BreadCrumbs/BreadCrumbs";
-import { Context } from "../../Context/Context";
 
 const WriterApplication = () => {
-  const { theme, dark } = useContext(Context);
+  const { theme, dark } = useSelector(state=>state.theme);
   return (
     <div className='page'>
       <div className='breadCrumb-container'>

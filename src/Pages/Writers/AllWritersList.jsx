@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import ReactPaginate from "react-paginate";
-import { Context } from "../../Context/Context";
 import { ArrowBack, ArrowForward } from "@material-ui/icons";
 import SingleWriter from "./SingleWriter";
+import { useSelector } from "react-redux";
 
 const AllWritersList = ({ data }) => {
   const [pageNumber, setPageNumber] = useState(0);
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
 
   const dataPerPage = 15;
   const pagesVisited = pageNumber * dataPerPage;

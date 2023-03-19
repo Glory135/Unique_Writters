@@ -1,9 +1,8 @@
 import { Button } from "@material-ui/core";
-import React, { useContext } from "react";
-import { Context } from "../../Context/Context";
+import { useSelector } from "react-redux";
 
 const SingleWriter = ({ data }) => {
-  const { theme, dark } = useContext(Context);
+  const { theme, dark } = useSelector(state=>state.theme);
   return (
     <div
       style={{

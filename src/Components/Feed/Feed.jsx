@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { Post } from '../Post/Post';
 import { ArrowBack, ArrowForward } from '@material-ui/icons';
-import { Context } from '../../Context/Context';
+import { useSelector } from 'react-redux';
 
 export const Feed = ({ data }) => {
 	const [pageNumber, setPageNumber] = useState(0);
-	const { theme } = useContext(Context);
+	const { theme } = useSelector(state=>state.theme);
 
 	const dataPerPage = 10;
 	const pagesVisited = pageNumber * dataPerPage;

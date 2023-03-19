@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import {
 	Card,
 	CardMedia,
@@ -7,11 +6,12 @@ import {
 	Button,
 	CardActions,
 } from '@material-ui/core';
-import { Context } from '../../Context/Context';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const Post = ({ data, ratio }) => {
-	const { theme, mobile } = useContext(Context);
+	const { theme } = useSelector((state) => state.theme);
+	const { mobile } = useSelector((state) => state.extra);
 	let screenWidth = window.screen.availWidth;
 
 	const cardBodyText =
@@ -34,11 +34,11 @@ export const Post = ({ data, ratio }) => {
 					<div
 						style={{ color: theme.secondary }}
 						className='post-details'>
-						<Link to='/profile' className='Link'>
+						{/* <Link to='/profile' className='Link'> */}
 							<div className='author detail'>
 								Author: Bolaji Blessing
 							</div>
-						</Link>
+						{/* </Link> */}
 
 						<div className='time detail'>1st May 2020</div>
 					</div>

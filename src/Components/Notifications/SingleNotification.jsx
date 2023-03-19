@@ -1,10 +1,9 @@
 import { Delete } from "@material-ui/icons";
-import React, { useContext } from "react";
-import { Context } from "../../Context/Context";
+import { useSelector } from "react-redux";
 import PlaceholderDP from "../../images/DP.svg";
 
 export const SingleNotification = ({ notification }) => {
-    const { dark } = useContext(Context);
+    const { dark } = useSelector(state=>state.theme);
     return (
         <div
         style={{

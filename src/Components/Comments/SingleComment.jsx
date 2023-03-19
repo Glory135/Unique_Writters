@@ -1,13 +1,12 @@
 import { Button } from '@material-ui/core';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Context } from '../../Context/Context';
-// import DP from "../../images/DP.svg";
 import replyLogo from '../../images/icon-reply.svg';
 import { WriteComment } from './WriteComment';
 
 export const SingleComment = ({ user, comment }) => {
-	const { theme, dark } = useContext(Context);
+	const { theme, dark } = useSelector(state=>state.theme);
 	const [replyMode, setReplyMode] = useState(false);
 
 	return (

@@ -1,9 +1,8 @@
 import { ThumbUpOutlined } from "@material-ui/icons";
-import React, { useContext } from "react";
-import { Context } from "../../Context/Context";
+import { useSelector } from "react-redux";
 
 export const SingleListItem = ({ writer }) => {
-  const { theme } = useContext(Context);
+  const { theme } = useSelector(state=>state.theme);
   return (
     <div
       style={{
